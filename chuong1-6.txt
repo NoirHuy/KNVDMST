@@ -1,0 +1,200 @@
+1. Bản rõ x = 15 khóa công khai với modulo hệ thống N = 39, e = 7 khi mã hóa bản rõ x với khóa trên theo hệ RSA, chúng ta sẽ thu được bản mã nào sau đây:
+32
+24
+65
+14
+**2. IV không dùng trong: ***
+MAC
+CFB
+OFB
+CBC
+3. Trong hệ trao đổi khóa Diffie-Hellman với p = 11, α = 5, Khi người A tính SA = 4 và gửi cho người B, người B chọn số ngẫu nhiên (bí mật) rB = 7, khi đó người B tính được khóa chung K:
+K = 11^7 mod 5
+K = 4^5 mod 11
+K = 4^7 mod 11
+K = 4^11 mod 5
+**4. AES được chuẩn hóa bởi: ***
+ITU
+IEEE
+NIST
+ISO
+**5. CBC có nhược điểm: ***
+Chậm
+Không dùng IV
+Lỗi lan truyền
+Dễ bị tấn công
+**6. Mã dịch vòng là mã: ***
+Tất cả đều đúng.
+Mã thay thế đa biểu
+Mã công khai
+Thay thế đơn biểu
+**7. Mã khóa công khai ***
+Tất cả đều sai.
+Dùng 1 khóa để mã hóa và sử dụng khóa đó để giải mã
+Có thể dùng khóa public của người nhận để mã hóa
+Có thể dùng khóa public của người gửi để mã hóa
+8. Trong 4 chế độ ứng dụng DES chế độ ứng dụng DES theo kiểu mã dòng là:
+Chế độ phân phối mã CFB (cipher FeedBack) và chế độ phân phối đầu ra OFB (Output FeedBack).
+Chế độ chuyển mã điện tử ECB và chế độ phản hồi đầu ra OFB.
+Chế độ phản hồi mã CFB và chế độ liên kết khối mã CBC.
+Chế độ chuyển mã điện tử ECB (Electronic Codebook) và chế độ liên kết mã khối CBC (Cipher Block Chaining).
+9. Một hệ thống gồm 10 thiết bị đầu cuối liên lạc với nhau sử dụng mật mã đối xứng. Mỗi đầu cuối sử dụng các khóa bí mật khác nhau khi kết nối với mỗi đầu cuối khác có bao nhiêu khóa bí mật trong toàn hệ thống
+10 khóa
+45 khóa
+90 khóa
+20 khóa
+10. So sánh RSA và DES:
+RSA dựa trên các hàm toán học, còn DES dựa trên các thao tác xử lý bit.
+RSA an toàn hơn DES.
+Bằng cách phân tích khóa công khai thì có thể tìm ra khóa bí mật của RSA, trong khi đối với DES các tìm ra khóa là thử lần lượt.
+RSA có tốc độ thực thi bằng phần mềm cao hơn DES.
+**11. Trong hệ RSA cho e = 23, Φ(N) = 160 ta tìm d là số nghịch đảo của e là ***
+d = 1 vì d.e = 1.
+Không tìm được số nghịch đảo.
+d = 7 vì 23 chia hết cho 7
+d = 7 vì 23.7 = 161 mod 160 = 1
+12. Phương thức tấn công nào ngăn chặn các user hợp lệ truy xuất các tài nguyên hệ thống?
+Sniffing.
+Spoofing
+Dos
+Man-In-The-Middle.
+**13. Giá trị hàm Ơ-le (Euler) φ(440) là ***
+160
+44
+234
+110
+**14. Một trong hai cách tiếp cận tấn công mã đối xứng ***
+Không thể tấn công.
+Tấn công tìm khóa dựa trên khóa công khai.
+Tấn công tìm bản rõ
+Tấn công duyệt toàn bộ (vét cạn)
+**15. Chọn câu sai khi nói về nguy cơ đối với sự an toàn của hệ thống thông tin: ***
+Việc xâm nhập hệ thống (intrusion) có thể là hành vi xuất phát từ bên ngoài hoặc từ bên trong hệ thống.
+Tin tặc (Acttacker) có thể là người bên trong hệ thống.
+Người sử dụng không được huấn luyện về an toàn của hệ thống cũng là một nguy cơ đối với hệ thống
+Hệ thống không kết nối vào internet thì không có nguy cơ bị tấn công.
+16. Trong hệ RSA cho d = 7, p = 5, q = 11 cho bản mã C = 5 khi đó bản rõ M được tính là
+M = C^d mod 55 = 5^7 mod 55
+M = C^p mod 55 = 5^5 mod 55
+M = d^C mod 40 = 7^5 mod 40
+M = C^d mod 40 = 5^7 mod 40
+17. Trong hệ mã hóa khóa công khai RSA biết p = 5, q = 7 thì giá trị hàm Φ(N) là:
+Một số khác.
+24
+12
+35
+**18. X = EK(Y). Bản mã là ***
+K
+Y
+X
+D
+**19. Nguyên tắc xây dựng một hệ thống bảo mật: ***
+Áp dụng các cơ chế bảo mật phù hợp với hệ thống.
+Tất cả đều đúng.
+Xây dựng các chính sách bảo mật chặt chẽ.
+Xây dựng các chính sách bảo mật và triển khai các cơ chế đảm bảo chính sách đó.
+**20. Chọn câu sai khi nói về AES. ***
+AES là chuẩn mã thấp hơn DES
+Tất cả đều đúng
+AES là chuẩn mã nâng cao hơn DES
+AES là chuẩn mã nâng cao
+**21. Mã Ceasar (với khóa k = 3) của party là ***
+sduwb
+tduwb
+Tất cả đều sai
+teuwb
+**22. Phát biểu sai? Kerberos ***
+Tất cả đều sai
+Có thể bị tấn công Password
+Có thể bị tấn công
+Đáp ứng yêu cầu không chối cãi
+**23. Chọn câu đúng khi nói về nguy cơ và rủi ro đối với hệ thống thông tin: ***
+Tất cả các rủi ro đều có ít nhất một nguy cơ đi kèm với nó.
+Có thể ngăn chặn các rủi ro bằng cách ngăn chặn các nguy cơ tương ứng.
+Mục tiêu của bảo mật hệ thống là ngăn chặn tất cả các rủi ro xảy ra trên hệ thống.
+Tất cả các câu trên
+**24. Trong DES, hàm f gồm bao nhiêu bước chính? ***
+D. 5
+C. 4
+A. 2
+B. 3
+**25. Trong mã hóa Hill, dữ liệu được xử lý theo dạng nào? ***
+Từng ký tự riêng lẻ
+Theo từng từ
+Từng cặp hoặc khối ký tự
+Theo từng dòng
+26. Trong hệ trao đổi khóa Diffie-Hellman với p = 11, α = 5, Một người A chọn số ngẫu nhiên (bí mật) rA = 3 Khi người A tính SA là:
+SA=1
+SA=4
+SA=15
+SA=2
+**27. S-box trong DES có chức năng: ***
+Hoán vị
+Thay thế phi tuyến
+Mã hóa khóa
+Giải mã
+**28. Mã khóa công khai *** (Bộ đáp án thứ 2)
+Tất cả đều sai.
+Dùng 1 khóa để mã hóa và 1 khóa để giải mã
+Có thể tấn công bằng phương pháp vét cạn.
+Có thể dùng khóa public để mã hóa
+**29. Các cơ chế đảm bảo tính toàn vẹn của thông tin là: ***
+Lưu toàn bộ thông tin trong hệ thống dưới dạng nén.
+Tất cả các cơ chế trên.
+Gồm các cơ chế ngăn chặn và cơ chế phát hiện các vi phạm về tính toàn vẹn thông tin.
+Mật mã hóa toàn bộ thông tin trong hệ thống.
+30. Chọn câu đúng khi nói về các phương thức tấn công bằng phần mềm độc (malicious code):
+Worm là loại phần mềm độc hoạt động dựa vào một phần mềm khác.
+Logic bomb không thể phá hoại hệ thống nếu đồng hồ hệ thống luôn chậm hơn thời gian hiện hành.
+Trojan horse là một loại phần mềm độc nhưng có tên giống như các tập tin bình thường.
+Virus có thể tự sao chép và lan truyền thông qua mạng máy tính.
+**31. Chế độ ECB có đặc điểm: ***
+Độc lập giữa các khối
+Phụ thuộc khối trước
+An toàn cao
+An toàn hơn DES
+**32. Khoá riêng có đặc điểm ***
+Không an toàn
+Thời gian thực hiện nhanh.
+Được thay thế bằng khoá công khai
+Thời gian thực hiện chậm
+**33. RSA là giải thuật. ***
+Mã khóa riêng.
+Tất cả đều sai.
+Mã công khai.
+Là tên một tổ chức quốc tế về mã hóa.
+**34. 7^2023 mod 13 (7 lũy thừa 2023 mod 13) bằng ***
+6
+13
+7
+Một số khác.
+35. Trong hệ RSA cho e = 11, p = 5, q = 7 cho bản rõ M = 4 khi đó bản mã C được tính là
+9
+35
+4
+24
+**36. Chọn khẳng định đúng với giải thuật MD5: ***
+Đầu ra có độ dài 256 bit
+Chữ ký điện tử.
+Đầu ra có độ dài 128 bit
+Mã hóa công khai.
+**37. Chọn câu đúng về độ an toàn của DES: ***
+Tất cả đều đúng.
+Mạch giải mã TDES không thể giải mã được thông tin mã hóa bởi DES.
+Khóa đưa vào thuật toán là 64 bit, nhưng thực chất chỉ sử dụng 56 bit.
+Chỉ có thể tấn công hệ thống mật mã DES bằng phương pháp brute foree.
+**38. P-box trong DES dùng để: ***
+Hoán vị bit
+Giải mã
+Tạo khóa
+Mã hóa
+**39. Hash không khóa dùng để: ***
+Toàn vẹn
+Giải mã
+Xác thực
+Mã hóa
+**40. Các thuật toán sau đây là thuật toán mã hóa đối xứng ***
+IDEA, Blowfish, AES, Elliptic Cure.
+Triple-DES, RC4, RC5, IDEA
+Triple-DES, RC4, RC5, Blowfish
+RC4, RC5, IDEA, Blowfish.

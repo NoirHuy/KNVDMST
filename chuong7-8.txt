@@ -1,0 +1,119 @@
+1. Chữ ký số (Digital Signature) cung cấp dịch vụ an toàn nào sau đây mà mã xác thực thông điệp (MAC) không cung cấp được?
+Tính bí mật
+Tính toàn vẹn
+Tính chống chối cãi (Non-repudiation)
+Tính xác thực nguồn gốc
+
+2. Trong lược đồ chữ ký số RSA, để ký một thông điệp M, người gửi A sẽ thực hiện phép toán nào với khóa của mình?
+Mã hóa bản băm của M bằng khóa công khai của A
+Mã hóa bản băm của M bằng khóa bí mật của A
+Giải mã M bằng khóa công khai của người nhận
+Mã hóa bản băm của M bằng khóa bí mật của người nhận
+
+3. Để kiểm tra chữ ký số RSA của người gửi A trên thông điệp M, người nhận B sẽ dùng khóa nào để giải mã chữ ký?
+Khóa công khai của A
+Khóa bí mật của A
+Khóa công khai của B
+Khóa bí mật của B
+
+4. Chứng thư số X.509 được sử dụng để liên kết điều gì?
+Tên người dùng và địa chỉ IP
+Khóa công khai và danh tính của thực thể sở hữu
+Khóa bí mật và khóa công khai
+Tên miền và giao thức bảo mật
+
+5. Thành phần nào chịu trách nhiệm ký và ban hành chứng thư số (Digital Certificate) trong hệ thống hạ tầng khóa công khai PKI?
+RA (Registration Authority)
+CA (Certificate Authority)
+KDC (Key Distribution Center)
+TTP (Trusted Third Party)
+
+6. Giao thức SSL/TLS hoạt động ở tầng nào trong mô hình OSI?
+Tầng mạng (Network Layer)
+Tầng liên kết dữ liệu (Data Link Layer)
+Giữa tầng truyền tải (Transport) và tầng ứng dụng (Application)
+Tầng vật lý (Physical Layer)
+
+7. Trong quá trình thiết lập kết nối SSL/TLS (Handshake), khóa đối xứng dùng để mã hóa dữ liệu truyền sau đó được trao đổi bằng cách nào?
+Truyền trực tiếp dưới dạng rõ
+Được mã hóa bằng khóa công khai của máy chủ thu được từ chứng thư số
+Được mã hóa bằng khóa bí mật của máy khách
+Được sinh ra ngẫu nhiên và không cần trao đổi
+
+8. Giao thức IPSec hoạt động ở tầng nào của mô hình TCP/IP?
+Tầng ứng dụng (Application)
+Tầng liên kết (Link)
+Tầng Internet/Mạng (Network)
+Tầng truyền tải (Transport)
+
+9. Trong IPSec, chế độ nào thực hiện mã hóa toàn bộ gói tin IP gốc bao gồm cả phần Header gốc?
+Chế độ vận chuyển (Transport Mode)
+Chế độ đường hầm (Tunnel Mode)
+Chế độ bảo mật (Security Mode)
+Chế độ liên kết (Association Mode)
+
+10. Giao thức AH (Authentication Header) trong IPSec cung cấp các dịch vụ an toàn nào?
+Tính bí mật và xác thực
+Tính xác thực nguồn gốc, tính toàn vẹn và chống phát lại (không mã hóa)
+Chỉ cung cấp tính bí mật
+Chỉ cung cấp tính chống phát lại
+
+11. Giao thức ESP (Encapsulating Security Payload) trong IPSec khác gì so với AH?
+ESP không cung cấp tính toàn vẹn
+ESP cung cấp thêm tính bí mật dữ liệu bằng cách mã hóa
+ESP hoạt động ở tầng ứng dụng
+ESP không sử dụng khóa đối xứng
+
+12. Hệ thống PGP (Pretty Good Privacy) được thiết kế chủ yếu để bảo mật cho dịch vụ nào?
+Duyệt web (HTTP)
+Truyền file (FTP)
+Thư điện tử (Email)
+Truy cập từ xa (Telnet)
+
+13. Trong PGP, để gửi một email vừa bảo mật vừa xác thực cho B, người gửi A sẽ làm gì?
+Ký bằng khóa bí mật của B rồi mã hóa bằng khóa công khai của A
+Ký bằng khóa bí mật của A rồi mã hóa bằng khóa công khai của B
+Ký bằng khóa công khai của A rồi mã hóa bằng khóa bí mật của B
+Ký bằng khóa công khai của B rồi mã hóa bằng khóa bí mật của A
+
+14. Tường lửa trạng thái (Stateful Inspection Firewall) khác tường lửa lọc gói tin thông thường (Packet Filtering Firewall) ở điểm nào?
+Lọc gói tin dựa trên địa chỉ IP
+Theo dõi trạng thái của các kết nối đang hoạt động và kiểm tra xem gói tin có thuộc kết nối hợp lệ hay không
+Hoạt động chậm hơn và kém an toàn hơn
+Chỉ lọc được giao thức HTTP
+
+15. Hệ thống phát hiện xâm nhập IDS (Intrusion Detection System) khác hệ thống ngăn chặn xâm nhập IPS (Intrusion Prevention System) ở điểm nào?
+IDS chỉ giám sát và đưa ra cảnh báo còn IPS có khả năng chủ động ngăn chặn cuộc tấn công khi phát hiện
+IDS hoạt động ở tầng vật lý còn IPS hoạt động ở tầng ứng dụng
+IDS an toàn hơn IPS
+IDS bắt buộc phải dùng phần cứng chuyên dụng còn IPS thì không
+
+16. Phương pháp phát hiện xâm nhập dựa trên chữ ký (Signature-based IDS) có nhược điểm lớn nhất là gì?
+Tốc độ xử lý dữ liệu chậm
+Không thể phát hiện được các cuộc tấn công mới chưa có trong cơ sở dữ liệu (Zero-day)
+Tỷ lệ cảnh báo giả quá cao đối với các hoạt động bình thường
+Yêu cầu cấu hình phần cứng cực kỳ phức tạp
+
+17. Phương pháp phát hiện bất thường (Anomaly-based IDS) hoạt động dựa trên nguyên lý nào?
+So sánh lưu lượng mạng với các chữ ký tấn công đã biết
+Xây dựng mô hình hành vi bình thường của hệ thống và cảnh báo khi có sự sai lệch đáng kể so với mô hình đó
+Chỉ kiểm tra các tệp tin virus trên máy tính
+Chặn tất cả các kết nối từ nước ngoài
+
+18. Danh sách hủy bỏ chứng thư CRL (Certificate Revocation List) do ai công bố và cập nhật?
+Người dùng chứng thư số
+Các công ty trình duyệt web
+Nhà ban hành chứng thư số CA
+Nhà đăng ký RA
+
+19. Để bảo vệ chống lại các cuộc tấn công nghe trộm mật khẩu trên mạng WiFi công cộng, người dùng nên sử dụng dịch vụ nào?
+Firewall cá nhân
+VPN (Virtual Private Network)
+Phần mềm diệt virus
+Trình duyệt ẩn danh
+
+20. Tấn công giả mạo ARP (ARP Spoofing) nhằm mục đích gì trong mạng LAN?
+Đánh cắp băng thông Internet
+Chèn địa chỉ MAC của kẻ tấn công liên kết với địa chỉ IP của cổng mặc định (Gateway) để thực hiện tấn công Man-In-The-Middle
+Phá hỏng card mạng của máy nạn nhân
+Đổi mật khẩu của bộ định tuyến
