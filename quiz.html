@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hệ Thống Ôn Thi Trắc Nghiệm - An Toàn & Bảo Mật Thông Tin</title>
+  <title>Hệ Thống Ôn Thi Trắc Nghiệm - Khởi Nghiệp & Đổi Mới Sáng Tạo</title>
   
   <!-- Google Fonts: Plus Jakarta Sans for Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -252,6 +252,39 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    /* ==========================================
+       TOWEL OPTIONS (SHUFFLING & TOGGLES)
+       ========================================== */
+    .option-toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      padding: 0.75rem 1.25rem;
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.01);
+      transition: var(--transition-base);
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .option-toggle-container:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .option-toggle-container input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+      cursor: pointer;
     }
 
     /* ==========================================
@@ -774,7 +807,7 @@
       color: #fff;
     }
 
-    /* Legend */
+    /* Legend Indicator Styles */
     .legend {
       margin-top: 1rem;
       display: flex;
@@ -1013,7 +1046,7 @@
         <div class="brand-logo">CS</div>
         <div class="brand-title">
           <h1>Cyber Quiz</h1>
-          <p>Hệ Thống Ôn Thi Trắc Nghiệm An Toàn Thông Tin</p>
+          <p>Hệ Thống Ôn Thi Trắc Nghiệm Khởi Nghiệp & Đổi Mới Sáng Tạo</p>
         </div>
       </div>
       <div class="header-actions">
@@ -1027,13 +1060,13 @@
     </header>
 
     <!-- ==========================================
-         SCREEN 1: WELCOME SCREEN (MODE & PART SELECTION)
+         SCREEN 1: WELCOME SCREEN (MODE, PART & CONFIG SELECTION)
          ========================================== -->
     <div id="welcome-screen" class="screen active">
       <div class="hero-badge">Ứng Dụng Ôn Luyện Trắc Nghiệm</div>
-      <h2 class="hero-title">Sẵn Sàng Cho Kỳ Thi An Toàn Thông Tin?</h2>
+      <h2 class="hero-title">Sẵn Sàng Cho Kỳ Thi Khởi Nghiệp & Đổi Mới Sáng Tạo?</h2>
       <p class="hero-desc">
-        Hệ thống ôn luyện thông minh được chia làm 2 phần rõ rệt, kết hợp phương thức hiển thị công thức trực quan giúp bạn nắm bắt nhanh kiến thức học phần.
+        Hệ thống ôn luyện 100 câu hỏi trắc nghiệm bám sát nội dung môn học Khởi nghiệp và Đổi mới Sáng tạo, giúp sinh viên nắm vững tư duy kinh doanh và phát triển ý tưởng thực tiễn.
       </p>
       
       <!-- Step 1: Select Part -->
@@ -1046,8 +1079,8 @@
           <label class="part-select-card" for="part-1" id="label-part-1">
             <input type="radio" name="part-selection" id="part-1" value="1" checked onchange="togglePart(1)" style="display: none;">
             <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-              <span class="part-title" style="font-weight: 700; font-size: 1.05rem;">Phần 1: Ôn Tập Chương 1 - 6 (40 Câu Hỏi)</span>
-              <span class="part-desc" style="font-size: 0.8rem; color: var(--text-muted);">Mã hóa đối xứng (DES, AES), mật mã công khai RSA, trao đổi khóa Diffie-Hellman, các hàm băm và MAC...</span>
+              <span class="part-title" style="font-weight: 700; font-size: 1.05rem;">Phần 1: Tổng quan Khởi nghiệp, Đổi mới Sáng tạo & Tư duy thiết kế (50 Câu Hỏi)</span>
+              <span class="part-desc" style="font-size: 0.8rem; color: var(--text-muted);">Khái niệm khởi nghiệp (Startup), Đổi mới sáng tạo (Innovation), Quy trình Design Thinking (Empathize, Define, Ideate, SCAMPER, 6 chiếc nón tư duy, Prototype, Pain Points)...</span>
             </div>
             <div class="part-check-icon">✓</div>
           </label>
@@ -1055,19 +1088,37 @@
           <label class="part-select-card" for="part-2" id="label-part-2">
             <input type="radio" name="part-selection" id="part-2" value="2" onchange="togglePart(2)" style="display: none;">
             <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-              <span class="part-title" style="font-weight: 700; font-size: 1.05rem;">Phần 2: Ôn Tập Chương 7 - 8 (20 Câu Hỏi)</span>
-              <span class="part-desc" style="font-size: 0.8rem; color: var(--text-muted);">Chữ ký số (RSA, DSA), hạ tầng PKI, X.509, bảo mật mạng (SSL/TLS, IPSec, PGP), tường lửa và IDS/IPS...</span>
+              <span class="part-title" style="font-weight: 700; font-size: 1.05rem;">Phần 2: Khởi nghiệp tinh gọn (Lean Startup), Mô hình BMC & Kỹ năng gọi vốn (50 Câu Hỏi)</span>
+              <span class="part-desc" style="font-size: 0.8rem; color: var(--text-muted);">Triết lý Lean Startup, vòng lặp BML, xây dựng MVP, đo lường metrics, chuyển hướng (Pivot), Mô hình kinh doanh Canvas (BMC), Kỹ năng gọi vốn & Thuyết trình pitch...</span>
             </div>
             <div class="part-check-icon">✓</div>
           </label>
         </div>
       </div>
 
-      <!-- Step 2: Select Mode -->
-      <div style="width: 100%; max-width: 650px; text-align: left; margin-bottom: 1rem;">
+      <!-- Step 2: Shuffling Options -->
+      <div style="margin-bottom: 1.75rem; width: 100%; max-width: 650px; text-align: left;">
         <h4 class="step-header">
           <span class="step-num">2</span>
-          Chọn chế độ làm bài:
+          Tùy chọn hiển thị đề thi:
+        </h4>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; width: 100%;">
+          <label class="option-toggle-container">
+            <input type="checkbox" id="shuffle-questions-toggle" checked>
+            <span>Trộn ngẫu nhiên thứ tự câu hỏi</span>
+          </label>
+          <label class="option-toggle-container">
+            <input type="checkbox" id="shuffle-options-toggle">
+            <span>Trộn ngẫu nhiên đáp án (A, B, C, D)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Step 3: Select Mode -->
+      <div style="width: 100%; max-width: 650px; text-align: left; margin-bottom: 1rem;">
+        <h4 class="step-header">
+          <span class="step-num">3</span>
+          Chọn chế độ làm bài và Bắt đầu:
         </h4>
         <div class="mode-container">
           <!-- Practice Mode Card -->
@@ -1092,7 +1143,7 @@
             </div>
             <h3 class="mode-name">Chế Độ Thi Thử</h3>
             <p class="mode-desc" id="exam-mode-desc-text">
-              Thời gian giới hạn **40 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.
+              Thời gian giới hạn **50 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.
             </p>
           </div>
         </div>
@@ -1173,7 +1224,7 @@
             </div>
             
             <div class="grid-container" id="question-grid">
-              <!-- Grid items 1-40 populated dynamically -->
+              <!-- Grid items populated dynamically -->
             </div>
             
             <!-- Legend Indicators -->
@@ -1264,7 +1315,7 @@
          APPLICATION FOOTER
          ========================================== -->
     <footer>
-      <p>&copy; 2026 CS-CyberQuiz. Thiết kế giao diện cao cấp dành cho ôn tập An Toàn Hệ Thống.</p>
+      <p>&copy; 2026 CS-CyberQuiz. Thiết kế giao diện cao cấp dành cho ôn tập Khởi Nghiệp và Đổi Mới Sáng Tạo.</p>
     </footer>
 
   </div>
@@ -1277,528 +1328,1112 @@
        QUIZ DATABASE PART 1 (40 QUESTIONS - CH 1-6)
        ========================================== */
     const quizDataPart1 = [
-      {
-        question: "Bản rõ $x = 15$, khóa công khai với modulo hệ thống $N = 39, e = 7$. Khi mã hóa bản rõ $x$ với khóa trên theo hệ RSA, chúng ta sẽ thu được bản mã nào sau đây:",
-        options: ["32", "24", "65", "14"],
-        answer: 1,
-        explanation: "Công thức mã hóa RSA: $C = x^e \\bmod N$. Thay số: $C = 15^7 \\bmod 39$. Ta có thể tách $39 = 3 \\times 13$. Với mod 3: $15^7 \\equiv 0^7 \\equiv 0 \\pmod 3$. Với mod 13: $15^7 \\equiv 2^7 \\equiv 128 \\equiv 11 \\pmod{13}$. Áp dụng định lý số dư Trung Hoa để tìm số thuộc $[0, 38]$ thỏa chia hết cho 3 và đồng dư 11 mod 13, ta tính được số đó là $24$. Vậy bản mã thu được là 24."
-      },
-      {
-        question: "Vectơ khởi tạo (IV) **không** được sử dụng trong chế độ nào sau đây:",
-        options: ["MAC", "CFB", "OFB", "CBC"],
-        answer: 0,
-        explanation: "Vectơ khởi tạo (IV) là bắt buộc trong các chế độ vận hành mã khối như CBC, CFB, OFB để đảm bảo tính ngẫu nhiên của bản mã đầu ra. Trong khi đó, MAC (Message Authentication Code) là mã xác thực thông điệp không dùng IV trực tiếp trong định nghĩa vận hành cốt lõi."
-      },
-      {
-        question: "Trong hệ trao đổi khóa Diffie-Hellman với $p = 11, \\alpha = 5$. Khi người A tính được $S_A = 4$ và gửi cho người B, người B chọn số ngẫu nhiên (bí mật) $r_B = 7$. Khi đó người B tính được khóa chung $K$ là:",
-        options: ["$K = 11^7 \\bmod 5$", "$K = 4^5 \\bmod 11$", "$K = 4^7 \\bmod 11$", "$K = 4^{11} \\bmod 5$"],
-        answer: 2,
-        explanation: "Trong hệ Diffie-Hellman, khi nhận được giá trị công khai $S_A$ từ người A, người B sẽ kết hợp với số mũ bí mật $r_B$ của mình để tính khóa chung theo công thức: $K = (S_A)^{r_B} \\bmod p$. Ở đây $S_A = 4$, $r_B = 7$, $p = 11$, do đó $K = 4^7 \\bmod 11$."
-      },
-      {
-        question: "AES được chuẩn hóa bởi tổ chức nào:",
-        options: ["ITU", "IEEE", "NIST", "ISO"],
-        answer: 2,
-        explanation: "Chuẩn mã hóa nâng cao AES (Advanced Encryption Standard) được tổ chức NIST (National Institute of Standards and Technology) của Mỹ chính thức chuẩn hóa và ban hành vào năm 2001 sau một cuộc thi toàn cầu."
-      },
-      {
-        question: "Chế độ liên kết khối mã CBC có nhược điểm lớn nhất là gì:",
-        options: ["Tốc độ thực hiện chậm", "Không sử dụng Vectơ khởi tạo (IV)", "Lỗi bị lan truyền khi truyền tin", "Dễ bị tấn công phân tích mật mã"],
-        answer: 2,
-        explanation: "Trong chế độ CBC, khối bản rõ hiện tại được XOR với khối bản mã trước đó rồi mới mã hóa. Do đó, một lỗi bit xảy ra trên đường truyền đối với một khối bản mã $C_i$ sẽ gây lỗi toàn bộ khối bản rõ $P_i$ giải mã tương ứng, và làm sai lệch 1 bit tại vị trí tương ứng của khối bản rõ kế tiếp $P_{i+1}$ (gọi là lỗi lan truyền)."
-      },
-      {
-        question: "Mã dịch vòng (Shift Cipher) thuộc loại mã nào sau đây:",
-        options: ["Tất cả các phương án đều đúng", "Mã thay thế đa biểu (Polyalphabetic Substitution)", "Mã hóa khóa công khai", "Mã thay thế đơn biểu (Monoalphabetic Substitution)"],
-        answer: 3,
-        explanation: "Mã dịch vòng (như mật mã Caesar) dịch chuyển cố định mỗi chữ cái trong bảng chữ cái đi $k$ vị trí. Vì mỗi ký tự gốc luôn luôn được thay thế bởi một ký tự cố định duy nhất trong suốt văn bản nên nó là mã thay thế đơn biểu."
-      },
-      {
-        question: "Phát biểu nào sau đây là **đúng** khi nói về hệ mã khóa công khai:",
-        options: ["Tất cả các phương án đều sai", "Dùng chung 1 khóa để mã hóa và giải mã", "Có thể dùng khóa công khai (public key) của người nhận để mã hóa dữ liệu gửi đi", "Có thể dùng khóa công khai (public key) của người gửi để mã hóa dữ liệu gửi đi"],
-        answer: 2,
-        explanation: "Nguyên tắc cốt lõi của mã hóa khóa bất đối xứng (khóa công khai): Người gửi dùng khóa công khai (Public Key) của người nhận để mã hóa thông tin, đảm bảo chỉ có người nhận với khóa bí mật tương ứng (Private Key) mới giải mã được."
-      },
-      {
-        question: "Trong 4 chế độ ứng dụng của chuẩn DES, các chế độ hoạt động theo kiểu mã dòng (Stream Cipher) là:",
-        options: ["Chế độ phản hồi mã CFB và chế độ phản hồi đầu ra OFB", "Chế độ bản mã điện tử ECB và chế độ phản hồi đầu ra OFB", "Chế độ phản hồi mã CFB và chế độ liên kết khối mã CBC", "Chế độ bản mã điện tử ECB và chế độ liên kết khối mã CBC"],
-        answer: 0,
-        explanation: "Chế độ CFB (Cipher Feedback) và OFB (Output Feedback) sử dụng bộ mã khối để tạo ra dòng khóa (keystream), sau đó XOR với bản rõ để tạo thành bản mã, biến đổi bộ mã khối hoạt động như một thuật toán mã dòng."
-      },
-      {
-        question: "Một hệ thống gồm 10 thiết bị đầu cuối liên lạc với nhau sử dụng mật mã đối xứng. Mỗi đầu cuối sử dụng các khóa bí mật khác nhau khi kết nối với mỗi đầu cuối khác. Có bao nhiêu khóa bí mật cần dùng trong toàn bộ hệ thống:",
-        options: ["10 khóa", "45 khóa", "90 khóa", "20 khóa"],
-        answer: 1,
-        explanation: "Công thức tính số khóa đối xứng tối đa cho mạng có $n$ nút liên lạc đôi một bảo mật là: $\\frac{n(n-1)}{2}$. Với $n = 10$, ta có: $\\frac{10 \\times 9}{2} = 45$ khóa."
-      },
-      {
-        question: "Khi so sánh hệ mật mã RSA và DES, phát biểu nào sau đây là chính xác nhất:",
-        options: [
-          "RSA dựa trên các hàm toán học phức tạp, còn DES dựa trên các thao tác xử lý bit (thay thế và hoán vị)",
-          "RSA luôn an toàn tuyệt đối hơn so với DES trong mọi trường hợp",
-          "Bằng cách phân tích khóa công khai có thể tìm ra ngay khóa bí mật của RSA, trong khi đối với DES bắt buộc phải thử khóa vét cạn",
-          "RSA có tốc độ thực thi bằng phần mềm cao hơn nhiều so với DES"
+{
+        "question": "Theo định nghĩa cốt lõi, Startup khác doanh nghiệp truyền thống ở điểm nào?",
+        "options": [
+                "Có vốn điều lệ lớn hơn",
+                "Tìm kiếm mô hình kinh doanh có khả năng tăng trưởng nhanh và mở rộng",
+                "Hoạt động lâu năm",
+                "Có nhiều nhân sự hơn"
         ],
-        answer: 0,
-        explanation: "Đây là điểm phân biệt nền tảng: RSA được xây dựng trên toán học lý thuyết số (lũy thừa modulo số nguyên tố lớn), trong khi DES/AES thực hiện các phép đảo bit logic như dịch bit, hoán vị, và tra bảng S-box để đạt hiệu năng phần cứng cao."
-      },
-      {
-        question: "Trong hệ RSA, cho số mũ công khai $e = 23$ và giá trị hàm Euler $\\Phi(N) = 160$. Số nghịch đảo $d$ (khóa bí mật) của $e$ là:",
-        options: [
-          "$d = 1$ vì $d \\cdot e = 1$",
-          "Không thể tìm được số nghịch đảo thỏa mãn",
-          "$d = 7$ vì $23$ chia hết cho $7$",
-          "$d = 7$ vì $23 \\cdot 7 = 161 \\equiv 1 \\pmod{160}$"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Theo Paul Graham, Startup được thiết kế để:",
+        "options": [
+                "Tối đa hóa lợi nhuận ngắn hạn",
+                "Hoạt động ổn định lâu dài",
+                "Phát triển nhanh chóng (grow fast)",
+                "Mở rộng thị trường địa phương"
         ],
-        answer: 3,
-        explanation: "Khóa bí mật $d$ là phần tử nghịch đảo modulo của $e$ theo $\\Phi(N)$, tức là $e \\cdot d \\equiv 1 \\pmod{\\Phi(N)}$. Ta thấy $23 \\cdot 7 = 161$. Thực hiện phép mod: $161 \\bmod 160 = 1$. Thỏa mãn điều kiện nghịch đảo modulo."
-      },
-      {
-        question: "Phương thức tấn công nào ngăn chặn các người dùng hợp lệ truy xuất và sử dụng các tài nguyên của hệ thống:",
-        options: ["Tấn công nghe trộm (Sniffing)", "Tấn công giả mạo (Spoofing)", "Tấn công từ chối dịch vụ (DoS)", "Tấn công kẻ đứng giữa (Man-In-The-Middle)"],
-        answer: 2,
-        explanation: "Tấn công từ chối dịch vụ DoS (Denial of Service) cố tình gửi một lượng yêu cầu khổng lồ làm nghẽn hoặc sập hệ thống dịch vụ, khiến các người dùng hợp pháp bị chặn và không thể truy cập tài nguyên."
-      },
-      {
-        question: "Giá trị của hàm Euler $\\phi(440)$ bằng bao nhiêu:",
-        options: ["160", "44", "234", "110"],
-        answer: 0,
-        explanation: "Ta phân tích thừa số nguyên tố: $440 = 2^3 \\times 5 \\times 11$. Giá trị hàm phi Euler: $\\phi(440) = 440 \\times (1 - \\frac{1}{2}) \\times (1 - \\frac{1}{5}) \\times (1 - \\frac{1}{11}) = 440 \\times \\frac{1}{2} \\times \\frac{4}{5} \\times \\frac{10}{11} = 160$."
-      },
-      {
-        question: "Một trong hai cách tiếp cận cơ bản nhất để tấn công hệ mật mã đối xứng là:",
-        options: ["Không thể thực hiện tấn công", "Tấn công tìm khóa dựa trên khóa công khai", "Tấn công tìm bản rõ trực tiếp", "Tấn công duyệt toàn bộ khóa (vét cạn / brute-force)"],
-        answer: 3,
-        explanation: "Trong mật mã đối xứng, hai hướng tấn công cốt lõi là: 1) Thử vét cạn toàn bộ các khóa có thể (Brute-force) cho đến khi ra bản rõ có nghĩa; 2) Tấn công phân tích mật mã (Cryptanalysis) nhằm tìm điểm yếu toán học hay cấu trúc thuật toán để lấy khóa."
-      },
-      {
-        question: "Chọn câu sai khi nói về nguy cơ đối với sự an toàn của hệ thống thông tin:",
-        options: [
-          "Việc xâm nhập hệ thống (intrusion) có thể xuất phát từ cả bên ngoài lẫn bên trong hệ thống",
-          "Tin tặc (Attacker) chỉ có thể là người từ bên ngoài hệ thống",
-          "Người sử dụng không được huấn luyện về an toàn hệ thống cũng là một nguy cơ lớn",
-          "Hệ thống không kết nối Internet thì hoàn toàn không có nguy cơ bị tấn công"
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Môi trường của Startup được xem là không chắc chắn vì:",
+        "options": [
+                "Không cần kế hoạch",
+                "Thiếu nhân lực",
+                "Không có sản phẩm",
+                "Nhiều giả định chưa được kiểm chứng và biến động thị trường cao"
         ],
-        answer: 3,
-        explanation: "Hệ thống ngoại tuyến (offline) hay không nối mạng Internet vẫn có thể bị phá hoại qua các thiết bị lưu trữ như USB, gián điệp cài cắm phần cứng độc hại hoặc mối đe dọa nội bộ (insider threat) từ người dùng có quyền truy cập vật lý."
-      },
-      {
-        question: "Trong hệ RSA, biết khóa bí mật $d = 7$, các số nguyên tố $p = 5, q = 11$ và nhận được bản mã $C = 5$. Bản rõ $M$ được tính toán theo công thức nào sau đây:",
-        options: [
-          "$M = C^d \\bmod 55 = 5^7 \\bmod 55$",
-          "$M = C^p \\bmod 55 = 5^5 \\bmod 55$",
-          "$M = d^C \\bmod 40 = 7^5 \\bmod 40$",
-          "$M = C^d \\bmod 40 = 5^7 \\bmod 40$"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Đặc trưng “nhiều giả thuyết” trong Startup nghĩa là:",
+        "options": [
+                "Các giả định về khách hàng, sản phẩm, thị trường cần được kiểm chứng",
+                "Startup luôn sai",
+                "Không cần nghiên cứu thị trường",
+                "Chỉ dựa vào cảm tính"
         ],
-        answer: 0,
-        explanation: "Phép giải mã RSA được thực hiện bởi công thức: $M = C^d \\bmod N$. Trong đó mô-đun $N = p \\times q = 5 \\times 11 = 55$. Vì thế công thức giải mã đầy đủ là $M = 5^7 \\bmod 55$."
-      },
-      {
-        question: "Trong hệ mật mã hóa khóa công khai RSA, biết hai số nguyên tố $p = 5, q = 7$. Giá trị của hàm phi Euler $\\Phi(N)$ là:",
-        options: ["Một số khác", "24", "12", "35"],
-        answer: 1,
-        explanation: "Khi $N = p \\times q$ là tích của hai số nguyên tố, giá trị hàm Euler được tính bằng: $\\Phi(N) = (p-1)(q-1) = (5-1)(7-1) = 4 \\times 6 = 24$."
-      },
-      {
-        question: "Biểu thức mã hóa được viết dưới dạng $X = E_K(Y)$. Trong đó, bản mã thu được là ký hiệu nào:",
-        options: ["K", "Y", "X", "D"],
-        answer: 2,
-        explanation: "Hàm $E_K(Y)$ mô tả thao tác: Dùng khóa $K$ chạy giải thuật mã hóa $E$ trên bản rõ $Y$ để sinh ra kết quả bản mã $X$. Do đó $X$ chính là bản mã."
-      },
-      {
-        question: "Nguyên tắc cơ bản nhất khi xây dựng một hệ thống bảo mật an toàn thông tin là gì:",
-        options: [
-          "Áp dụng các cơ chế bảo mật phù hợp với quy mô hệ thống",
-          "Tất cả các phương án đều đúng",
-          "Thiết lập và xây dựng các chính sách bảo mật chặt chẽ",
-          "Xây dựng các chính sách bảo mật rõ ràng kết hợp triển khai các cơ chế kỹ thuật để đảm bảo thực thi chính sách đó"
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Khác biệt giữa tối ưu lợi nhuận hiện có và thử nghiệm liên tục là:",
+        "options": [
+                "Thử nghiệm nhằm giảm chi phí",
+                "Startup ưu tiên kiểm chứng mô hình trước khi tối ưu lợi nhuận",
+                "Doanh nghiệp truyền thống không cần lợi nhuận",
+                "Cả hai giống nhau"
         ],
-        answer: 3,
-        explanation: "Mọi hệ thống bảo mật đúng quy chuẩn bắt buộc phải xây dựng trên hai cột trụ: 1) Chính sách bảo mật (Security Policy) đóng vai trò định hướng, định quy tắc; 2) Cơ chế bảo mật (Security Mechanism) để hiện thực hóa kỹ thuật, giám sát và cưỡng chế thực thi chính sách đó."
-      },
-      {
-        question: "Chọn câu sai khi nói về chuẩn mã hóa nâng cao AES:",
-        options: [
-          "AES là thuật toán mã hóa có độ an toàn thấp hơn DES",
-          "Tất cả các phát biểu đều đúng",
-          "AES là chuẩn mã hóa ra đời sau và nâng cao hơn DES",
-          "AES là chuẩn mã hóa khối đối xứng có hiệu năng và độ bảo mật cao"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Đổi mới sáng tạo (Innovation) được hiểu đúng là:",
+        "options": [
+                "Có ý tưởng mới",
+                "Sao chép cải tiến",
+                "Tạo sản phẩm đắt tiền",
+                "Biến ý tưởng mới thành giá trị thực tiễn được chấp nhận"
         ],
-        answer: 0,
-        explanation: "AES (Advanced Encryption Standard) được chọn lựa làm chuẩn bảo mật thay thế cho DES vì DES không còn đủ an toàn trước sức mạnh máy tính hiện đại (do khóa DES chỉ dài 56 bit có thể bị vét cạn trong vài giờ). AES an toàn và tiên tiến hơn DES rất nhiều."
-      },
-      {
-        question: "Bản mã hóa Caesar (với khóa dịch chuyển $k = 3$) của từ khóa 'party' là:",
-        options: ["sduwb", "tduwb", "Tất cả đều sai", "teuwb"],
-        answer: 0,
-        explanation: "Công thức Caesar: $c_i = (p_i + k) \\bmod 26$. Với khóa dịch $k = 3$, ta dịch chuyển các chữ cái: p + 3 = s, a + 3 = d, r + 3 = u, t + 3 = w, y + 3 = b (vòng lại đầu bảng chữ cái). Do đó kết quả thu được là `sduwb`."
-      },
-      {
-        question: "Phát biểu nào sau đây là sai khi nói về hệ thống xác thực Kerberos:",
-        options: [
-          "Tất cả các phương án đều sai",
-          "Kerberos có thể bị tấn công đoán mật khẩu (Password Guessing) nếu mật khẩu yếu",
-          "Kerberos vẫn có nguy cơ bị tấn công trong một số điều kiện môi trường cụ thể",
-          "Kerberos đáp ứng đầy đủ yêu cầu chống chối cãi (Non-repudiation)"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Điều kiện để một ý tưởng trở thành giá trị thực tiễn là:",
+        "options": [
+                "Giải quyết vấn đề thật và có người sẵn sàng trả tiền",
+                "Được nhiều người thích",
+                "Có công nghệ phức tạp",
+                "Có quảng cáo mạnh"
         ],
-        answer: 3,
-        explanation: "Kerberos hoạt động dựa trên mật mã đối xứng và sự tin tưởng vào bên thứ ba KDC. Do KDC nắm giữ tất cả khóa bí mật của máy khách lẫn máy chủ, nên KDC hoặc kẻ chiếm được KDC có thể giả danh bất kỳ ai. Vì vậy, Kerberos không hỗ trợ tính năng chống chối cãi (Non-repudiation) - vốn cần mật mã khóa bất đối xứng và chữ ký số."
-      },
-      {
-        question: "Chọn phát biểu đúng khi nói về khái niệm nguy cơ (threat) và rủi ro (risk) đối với hệ thống thông tin:",
-        options: [
-          "Tất cả các rủi ro đều có ít nhất một nguy cơ đi kèm với nó",
-          "Có thể triệt tiêu hoàn toàn rủi ro bằng cách ngăn chặn các nguy cơ tương ứng",
-          "Mục tiêu tối thượng của bảo mật hệ thống là ngăn chặn tất cả mọi rủi ro có thể xảy ra trên hệ thống",
-          "Tất cả các câu trên đều đúng"
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Vai trò của Startup CNTT trong chuyển đổi số là:",
+        "options": [
+                "Thay thế hoàn toàn doanh nghiệp truyền thống",
+                "Chỉ cung cấp phần mềm",
+                "Tạo giải pháp công nghệ giúp doanh nghiệp tối ưu và số hóa quy trình",
+                "Bán thiết bị phần cứng"
         ],
-        answer: 0,
-        explanation: "Rủi ro là khả năng một mối nguy cơ (Threat) khai thác thành công lỗ hổng bảo mật để phá hoại tài sản. Một rủi ro chỉ tồn tại khi có mối nguy cơ tương ứng. (Lưu ý: Thực tế không bao giờ triệt tiêu được 100% rủi ro, bảo mật chỉ nhằm giảm rủi ro xuống mức chấp nhận được)."
-      },
-      {
-        question: "Trong thuật toán mã hóa DES, hàm vòng $f$ (Round Function) gồm bao nhiêu bước biến đổi chính:",
-        options: ["2 bước", "3 bước", "4 bước (Mở rộng bit, Cộng khóa K, Thay thế S-box, Hoán vị P-box)", "5 bước"],
-        answer: 2,
-        explanation: "Hàm vòng $f$ của DES nhận đầu vào 32 bit dữ liệu nhánh và khóa vòng 48 bit, đi qua đúng 4 bước biến đổi chính: 1) Hộp mở rộng E-box (32 thành 48 bit); 2) Cộng khóa vòng XOR với khóa phụ; 3) Các hộp thay thế S-box (48 bit thành 32 bit); 4) Hộp hoán vị P-box (xáo trộn vị trí các bit 32 đầu ra)."
-      },
-      {
-        question: "Trong thuật toán mã hóa cổ điển Hill, dữ liệu đầu vào được xử lý dưới dạng nào:",
-        options: ["Từng ký tự riêng lẻ", "Theo từng từ ngữ", "Theo từng cặp hoặc khối ký tự (sử dụng ma trận)", "Theo từng dòng văn bản"],
-        answer: 2,
-        explanation: "Mật mã Hill là thuật toán mã hóa khối cổ điển hoạt động trên các nhóm ký tự đồng thời (đa biểu / polygraphic). Nó chia bản rõ thành các khối kích thước $m$ và nhân ma trận khối này với ma trận khóa $m \\times m$ modulo 26."
-      },
-      {
-        question: "Trong hệ trao đổi khóa Diffie-Hellman với số nguyên tố $p = 11, \\alpha = 5$. Người A chọn số ngẫu nhiên bí mật $r_A = 3$. Khi đó, giá trị công khai $S_A$ do người A tính toán và gửi đi là:",
-        options: ["$S_A = 1$", "$S_A = 4$", "$S_A = 15$", "$S_A = 2$"],
-        answer: 1,
-        explanation: "Công thức tính giá trị công khai gửi đi: $S_A = \\alpha^{r_A} \\bmod p$. Ở đây $\\alpha = 5$, $r_A = 3$, $p = 11$. Tính toán: $S_A = 5^3 \\bmod 11 = 125 \\bmod 11 = 4$ (vì $11 \\times 11 = 121, 125 - 121 = 4$)."
-      },
-      {
-        question: "Các hộp thay thế S-box trong giải thuật DES thực hiện chức năng nào sau đây:",
-        options: ["Hoán vị vị trí các bit", "Thay thế phi tuyến tính các nhóm bit để tạo tính hỗn loạn (confusion)", "Sinh khóa vòng và mã hóa khóa", "Giải mã dữ liệu khối"],
-        answer: 1,
-        explanation: "Hộp S-box trong DES là thành phần phi tuyến tính duy nhất. Nó thực hiện ánh xạ phi tuyến từ các khối 6 bit đầu vào thành 4 bit đầu ra, tạo ra hiệu ứng hỗn loạn (confusion) khiến việc giải ngược thuật toán nếu không có khóa trở nên bất khả thi."
-      },
-      {
-        question: "Khi nhắc đến hệ mã hóa khóa công khai (mật mã bất đối xứng), phát biểu nào dưới đây là chính xác:",
-        options: [
-          "Tất cả các câu đều sai",
-          "Hệ thống sử dụng một cặp khóa: một khóa để mã hóa (khóa công khai) và một khóa khác để giải mã (khóa bí mật)",
-          "Không thể bị tấn công bằng phương pháp duyệt khóa vét cạn",
-          "Chỉ có thể dùng duy nhất khóa công khai để thực hiện mã hóa thông tin bảo mật"
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Yếu tố cốt lõi tạo lợi thế cạnh tranh của Tech Startup là:",
+        "options": [
+                "Văn phòng đẹp",
+                "Công nghệ lõi và khả năng mở rộng",
+                "Nhân viên đông",
+                "Giá bán cao"
         ],
-        answer: 1,
-        explanation: "Đặc điểm cơ bản của hệ thống mã hóa khóa bất đối xứng là sử dụng một cặp khóa có quan hệ toán học chặt chẽ: Khóa công khai (Public Key) công bố rộng rãi dùng để mã hóa và Khóa bí mật (Private Key) giữ kín tuyệt đối dùng để giải mã."
-      },
-      {
-        question: "Các cơ chế cơ bản nhằm đảm bảo tính toàn vẹn (Integrity) của thông tin bao gồm:",
-        options: [
-          "Lưu trữ toàn bộ dữ liệu trong hệ thống dưới dạng tệp tin nén",
-          "Tất cả các cơ chế nêu trên",
-          "Bao gồm các cơ chế ngăn chặn thay đổi trái phép và các cơ chế phát hiện vi phạm tính toàn vẹn dữ liệu",
-          "Tiến hành mật mã hóa toàn bộ dữ liệu lưu trữ trong hệ thống"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Vì sao khả năng mở rộng (scalable) quan trọng?",
+        "options": [
+                "Giúp tăng nhân sự nhanh",
+                "Tăng chi phí sản xuất",
+                "Tăng vốn đầu tư",
+                "Doanh thu tăng nhanh hơn chi phí biên"
         ],
-        answer: 2,
-        explanation: "Tính toàn vẹn (đảm bảo thông tin không bị sửa đổi trái phép) đòi hỏi hai nhóm cơ chế phối hợp: Các cơ chế chủ động ngăn ngừa (như kiểm soát quyền truy cập, ghi đè) và các cơ chế thụ động phát hiện (như hàm băm MD5/SHA, chữ ký số, mã checksum)."
-      },
-      {
-        question: "Chọn câu đúng khi nói về các loại mã độc (malicious code) phá hoại hệ thống:",
-        options: [
-          "Worm (sâu máy tính) là loại mã độc bắt buộc phải hoạt động dựa vào việc ký sinh vào một file phần mềm khác",
-          "Logic bomb (bom logic) sẽ bị vô hiệu hóa hoàn toàn nếu đồng hồ của hệ thống luôn chạy chậm hơn thời gian thực tế",
-          "Trojan horse (ngựa Trojan) là loại mã độc ngụy trang dưới dạng một chương trình hữu ích hoặc các tệp tin bình thường để đánh lừa người dùng",
-          "Virus máy tính có khả năng tự động sao chép và tự lan truyền qua mạng máy tính mà không cần bất kỳ sự tương tác nào của người dùng hay vật chủ"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Theo khuyến nghị của UNDP, Startup cần hướng tới:",
+        "options": [
+                "Tạo tác động xã hội và phát triển bền vững",
+                "Lợi nhuận bằng mọi giá",
+                "Độc quyền thị trường",
+                "Giảm thuế tối đa"
         ],
-        answer: 2,
-        explanation: "Trojan horse là mã độc ẩn mình dưới lớp vỏ ngụy trang của một chương trình lành mạnh (như game hoặc phần mềm miễn phí) nhằm đánh lừa người dùng cài đặt. (Lưu ý: Worm mới tự lan qua mạng không cần vật chủ, Virus cần file vật chủ để bám vào, Logic bomb kích hoạt bằng nhiều điều kiện logic chứ không chỉ thời gian)."
-      },
-      {
-        question: "Chế độ bản mã điện tử ECB (Electronic Codebook) có đặc điểm nổi bật nào:",
-        options: [
-          "Việc mã hóa/giải mã các khối dữ liệu diễn ra hoàn toàn độc lập với nhau",
-          "Quá trình mã hóa khối hiện tại phụ thuộc chặt chẽ vào khối mật mã trước đó",
-          "Đạt mức độ an toàn và bảo mật thông tin rất cao",
-          "Có tính an toàn vượt trội hơn hẳn so với thuật toán DES thông thường"
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Xu hướng GenAI & AI Automation giai đoạn 2025–2030 sẽ:",
+        "options": [
+                "Thay thế hoàn toàn con người",
+                "Tăng năng suất, tự động hóa quy trình và tạo mô hình kinh doanh mới",
+                "Chỉ áp dụng trong game",
+                "Không ảnh hưởng Startup"
         ],
-        answer: 0,
-        explanation: "ECB là chế độ cơ bản nhất của mã khối. Nó chia văn bản rõ thành các khối bằng nhau và mã hóa từng khối một cách hoàn toàn độc lập với nhau bằng cùng một khóa bí mật. Điều này có nhược điểm là các khối rõ giống nhau sẽ sinh ra các khối mã giống hệt nhau, làm lộ cấu trúc dữ liệu."
-      },
-      {
-        question: "Đặc điểm nổi bật của hệ mật mã khóa bí mật (khóa đối xứng) so với hệ mật mã khóa công khai là:",
-        options: [
-          "Không đảm bảo tính an toàn khi truyền tin trên kênh truyền",
-          "Tốc độ tính toán và thực hiện mã hóa/giải mã cực kỳ nhanh chóng",
-          "Đang dần bị thay thế hoàn toàn bởi hệ mật mã khóa công khai",
-          "Tốc độ thực hiện rất chậm và tốn nhiều tài nguyên hệ thống"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "NIC trong hệ sinh thái khởi nghiệp Việt Nam là:",
+        "options": [
+                "Quỹ đầu tư nước ngoài",
+                "Trường đại học",
+                "Doanh nghiệp tư nhân",
+                "Trung tâm Đổi mới Sáng tạo Quốc gia"
         ],
-        answer: 1,
-        explanation: "Các thuật toán khóa đối xứng (như AES, 3DES, RC4) sử dụng các phép toán logic cơ bản mức độ bit nên tốc độ tính toán xử lý cực kỳ nhanh chóng và tốn ít tài nguyên phần cứng hơn so với các phép toán lũy thừa modulo số nguyên tố lớn trong hệ bất đối xứng."
-      },
-      {
-        question: "RSA là thuật toán thuộc loại nào sau đây:",
-        options: [
-          "Thuật toán mã hóa khóa bí mật (mật mã đối xứng)",
-          "Tất cả các phương án đều sai",
-          "Thuật toán mã hóa khóa công khai (mật mã bất đối xứng)",
-          "Tên gọi của một tổ chức tiêu chuẩn hóa mật mã quốc tế"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Vì sao sinh viên CNTT cần tư duy mô hình kinh doanh?",
+        "options": [
+                "Vì sản phẩm công nghệ chỉ có giá trị khi gắn với mô hình tạo doanh thu",
+                "Để làm marketing",
+                "Để viết code nhanh",
+                "Để xin việc"
         ],
-        answer: 2,
-        explanation: "RSA (viết tắt chữ cái đầu của 3 nhà toán học Ron Rivest, Adi Shamir và Leonard Adleman phát minh ra năm 1977) là giải thuật mã hóa khóa công khai (bất đối xứng) kinh điển và nổi tiếng nhất hiện nay."
-      },
-      {
-        question: "Phép tính số dư $7^{2023} \\bmod 13$ cho kết quả bằng bao nhiêu:",
-        options: ["6", "13", "7", "Một số khác"],
-        answer: 0,
-        explanation: "Áp dụng định lý Fermat nhỏ: Vì 13 là số nguyên tố và $\\gcd(7, 13) = 1$, ta có $7^{12} \\equiv 1 \\pmod{13}$. Chia số mũ: $2023 = 12 \\times 168 + 7$. Khi đó: $7^{2023} = (7^{12})^{168} \\times 7^7 \\equiv 1^{168} \\times 7^7 \\equiv 7^7 \\pmod{13}$. Ta tính $7^7 \\bmod 13$: $7^2 = 49 \\equiv 10 \\equiv -3 \\pmod{13}$. $7^6 \\equiv (-3)^3 = -27 \\equiv -1 \\equiv 12 \\pmod{13}$. Do đó, $7^7 = 7^6 \\times 7 \\equiv -1 \\times 7 = -7 \\equiv 6 \\pmod{13}$."
-      },
-      {
-        question: "Trong hệ RSA, cho số mũ công khai $e = 11$, hai số nguyên tố $p = 5, q = 7$. Khi mã hóa bản rõ $M = 4$, ta thu được bản mã $C$ bằng bao nhiêu:",
-        options: ["9", "35", "4", "24"],
-        answer: 0,
-        explanation: "Ta tính mô-đun $N = p \\times q = 35$. Công thức mã hóa RSA: $C = M^e \\bmod N = 4^{11} \\bmod 35$. Tính lũy thừa modulo: $4^3 = 64 \\equiv 29 \\equiv -6 \\pmod{35}$. $4^6 \\equiv (-6)^2 = 36 \\equiv 1 \\pmod{35}$. Khi đó $4^{11} = 4^6 \\times 4^5 \\equiv 1 \\times 4^5 \\equiv 1024 \\pmod{35}$. Thực hiện chia: $1024 = 35 \\times 29 + 9$. Vậy $C = 9$."
-      },
-      {
-        question: "Khẳng định nào sau đây là chính xác đối với thuật toán băm MD5:",
-        options: [
-          "Giá trị băm đầu ra luôn có độ dài cố định là 256 bit",
-          "Là một thuật toán chuyên dụng để tạo chữ ký số bất đối xứng",
-          "Giá trị băm đầu ra luôn có độ dài cố định là 128 bit",
-          "Thuộc nhóm các giải thuật mã hóa khóa công khai"
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Tư duy Data-Driven là:",
+        "options": [
+                "Quyết định theo cảm xúc",
+                "Quyết định theo kinh nghiệm cá nhân",
+                "Ra quyết định dựa trên dữ liệu và phân tích định lượng",
+                "Dựa vào linh cảm"
         ],
-        answer: 2,
-        explanation: "MD5 (Message-Digest algorithm 5) là hàm băm mật mã học phổ biến, đầu vào có độ dài bất kỳ và luôn cho ra kết quả băm có chiều dài cố định là 128 bit (biểu diễn dạng chuỗi Hex 32 ký tự)."
-      },
-      {
-        question: "Chọn nhận định đúng khi nói về độ an toàn của chuẩn mật mã DES:",
-        options: [
-          "Tất cả các nhận định đều đúng",
-          "Các thiết bị giải mã Triple-DES (TDES) không có khả năng tương thích ngược để giải mã dữ liệu mã hóa bằng DES",
-          "Khóa đầu vào của DES có độ dài 64 bit, nhưng thực chất thuật toán chỉ sử dụng 56 bit để mã hóa (8 bit còn lại dùng để kiểm tra chẵn lẻ)",
-          "Phương pháp duy nhất có khả năng tấn công phá mã hệ thống mật mã DES là tấn công brute-force vét cạn khóa"
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Mục tiêu cốt lõi của môn Khởi nghiệp Đổi mới sáng tạo là:",
+        "options": [
+                "Dạy lập trình",
+                "Phát triển tư duy giải quyết vấn đề và tạo giá trị mới",
+                "Học marketing",
+                "Học tài chính"
         ],
-        answer: 2,
-        explanation: "Thuật toán DES quy định khóa đầu vào dài 64 bit. Tuy nhiên, thuật toán loại bỏ 8 bit ở các vị trí thứ 8, 16, 24, 32, 40, 48, 56, 64 (dùng để làm bit parity kiểm tra lỗi hệ thống). Do đó, khóa thực sự tham gia quá trình mã hóa chỉ có độ dài hiệu dụng là 56 bit."
-      },
-      {
-        question: "Hộp hoán vị P-box (Permutation Box) trong thuật toán DES được sử dụng với mục đích chính là:",
-        options: ["Hoán vị vị trí sắp xếp của các bit dữ liệu", "Giải mã ngược dữ liệu đã bị mã hóa", "Khởi tạo khóa vòng cho các vòng lặp", "Thực hiện mã hóa các khối văn bản"],
-        answer: 0,
-        explanation: "Hộp P-box (Permutation) trong DES nhận các bit đầu ra từ các hộp S-box và tiến hành hoán đổi vị trí sắp xếp vật lý của chúng theo một sơ đồ cố định, đóng vai trò tạo ra sự khuếch tán (diffusion) lan rộng lỗi ra toàn khối."
-      },
-      {
-        question: "Hàm băm không khóa (Hash Function) thường được sử dụng nhằm mục đích chính nào sau đây:",
-        options: [
-          "Bảo vệ và kiểm tra tính toàn vẹn của thông tin (Integrity)",
-          "Thực hiện giải mã thông tin mật",
-          "Xác thực nguồn gốc thực tế của thông tin (Authentication)",
-          "Tiến hành mã hóa bảo mật thông tin"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Lợi thế của sinh viên CNTT khi khởi nghiệp là:",
+        "options": [
+                "Có vốn lớn",
+                "Quan hệ rộng",
+                "Có bằng MBA",
+                "Khả năng khai thác và phân tích dữ liệu"
         ],
-        answer: 0,
-        explanation: "Mục tiêu quan trọng nhất của hàm băm không có khóa là đảm bảo tính toàn vẹn dữ liệu. Bằng cách tính giá trị băm của file/thông điệp trước và sau khi truyền tải, ta so sánh chúng để phát hiện xem dữ liệu có bị thay đổi dù chỉ 1 bit hay không."
-      },
-      {
-        question: "Nhóm nào dưới đây chứa hoàn toàn các thuật toán mã hóa đối xứng (Symmetric Encryption):",
-        options: [
-          "IDEA, Blowfish, AES, Elliptic Curve",
-          "Triple-DES, RC4, RC5, IDEA",
-          "Triple-DES, RC4, RC5, Blowfish",
-          "RC4, RC5, IDEA, Blowfish"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Đặc thù AquaTech tại Đồng bằng sông Cửu Long là:",
+        "options": [
+                "Ứng dụng công nghệ vào nông nghiệp – thủy sản thích ứng biến đổi khí hậu",
+                "Phát triển fintech",
+                "Thương mại điện tử",
+                "Game online"
         ],
-        answer: 1,
-        explanation: "Các thuật toán đối xứng gồm: DES, Triple-DES (3DES), AES, Blowfish, RC4, RC5, IDEA. Riêng Elliptic Curve (ECC) là giải thuật mã hóa khóa công khai (bất đối xứng). Trong các đáp án B, C, D đều chứa hoàn toàn mã đối xứng (ở đây chọn phương án B làm đáp án chuẩn)."
-      }
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Tư duy thích ứng nhanh quan trọng vì:",
+        "options": [
+                "Giúp né trách nhiệm",
+                "Thị trường thay đổi nhanh và cần điều chỉnh mô hình liên tục",
+                "Không cần kế hoạch",
+                "Không cần chiến lược"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Startup khác kinh doanh truyền thống ở khả năng lặp lại (repeatable) vì:",
+        "options": [
+                "Startup không cần quy trình",
+                "Startup chỉ bán một lần",
+                "Startup tìm mô hình có thể nhân rộng và tái lập nhiều lần",
+                "Doanh nghiệp truyền thống không bán hàng"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Tư duy sáng tạo giúp:",
+        "options": [
+                "Tạo ý tưởng ngẫu nhiên",
+                "Tranh luận tốt hơn",
+                "Chuyển ý tưởng thành giải pháp khả thi",
+                "Làm việc cá nhân"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "95% Startup thất bại do:",
+        "options": [
+                "Thiếu vốn",
+                "Không giải quyết đúng nhu cầu khách hàng",
+                "Thiếu nhân sự",
+                "Marketing yếu"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Tư duy phân kỳ (Divergent) khác tư duy hội tụ (Convergent) ở chỗ:",
+        "options": [
+                "Phân kỳ tạo nhiều ý tưởng, hội tụ chọn lọc và tối ưu",
+                "Cả hai giống nhau",
+                "Phân kỳ là phân tích dữ liệu",
+                "Hội tụ là brainstorming"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Nên dùng tư duy phân kỳ khi:",
+        "options": [
+                "Đã có giải pháp cuối cùng",
+                "Chuẩn bị ra mắt sản phẩm",
+                "Tính lợi nhuận",
+                "Cần tạo ra nhiều phương án giải quyết vấn đề"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "5 giai đoạn Design Thinking gồm:",
+        "options": [
+                "Idea – Code – Test – Sell – Scale",
+                "Empathize – Define – Ideate – Prototype – Test",
+                "Plan – Build – Launch – Profit – Exit",
+                "Think – Make – Market – Sell – Grow"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Empathize quan trọng vì:",
+        "options": [
+                "Tăng doanh thu",
+                "Giúp hiểu sâu vấn đề và bối cảnh người dùng",
+                "Giảm chi phí",
+                "Rút ngắn thời gian code"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Không nên hỏi trực tiếp “Bạn muốn tính năng gì?” vì:",
+        "options": [
+                "Người dùng thường không biết rõ giải pháp tối ưu",
+                "Họ không muốn trả lời",
+                "Họ thiếu kiến thức",
+                "Họ không quan tâm"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Câu hỏi gợi mở hiệu quả khi phỏng vấn người dùng là:",
+        "options": [
+                "“Bạn thích sản phẩm này không?”",
+                "“Bạn có mua không?”",
+                "“Bạn đã từng gặp khó khăn gì khi…?”",
+                "“Bạn muốn giảm giá bao nhiêu?”"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Problem Statement hiệu quả cần:",
+        "options": [
+                "Dài và chi tiết kỹ thuật",
+                "Rõ người dùng – nhu cầu – bối cảnh – vấn đề",
+                "Chung chung",
+                "Tập trung vào sản phẩm"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Xác định nguyên nhân cốt lõi giúp:",
+        "options": [
+                "Tăng quảng cáo",
+                "Tăng vốn",
+                "Thay đổi nhân sự",
+                "Giải quyết đúng vấn đề thay vì xử lý triệu chứng"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Công cụ nào thường được sử dụng để tìm ra nguyên nhân gốc rễ của một vấn đề trong giai đoạn Define?",
+        "options": [
+                "Brainstorming",
+                "Sơ đồ chuỗi giá trị",
+                "Kỹ thuật 5 Whys (5 Câu hỏi Tại sao)",
+                "Phân tích SWOT"
+        ],
+        "answer": 2,
+        "explanation": "Kỹ thuật 5 Whys (5 câu hỏi Tại sao) là công cụ phổ biến trong giai đoạn Define để đào sâu tìm ra nguyên nhân gốc rễ của vấn đề."
+},
+{
+        "question": "Kỹ thuật How Might We (HMW) giúp:",
+        "options": [
+                "Xác định ngân sách dự án",
+                "Chuyển vấn đề thành cơ hội dưới dạng câu hỏi mở",
+                "Loại bỏ rủi ro",
+                "Đưa ra giải pháp cuối cùng"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Mục tiêu chính của giai đoạn Ideate là:",
+        "options": [
+                "Chọn giải pháp khả thi nhất",
+                "Kiểm thử thị trường",
+                "Tạo ra càng nhiều ý tưởng càng tốt mà chưa vội đánh giá",
+                "Tính toán lợi nhuận"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Chữ A (Adapt) trong SCAMPER nghĩa là:",
+        "options": [
+                "Thêm tính năng mới hoàn toàn",
+                "Điều chỉnh hoặc thích nghi ý tưởng hiện có cho bối cảnh mới",
+                "Loại bỏ chức năng",
+                "Thay thế nhân sự"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Chữ E (Eliminate) trong SCAMPER nhằm:",
+        "options": [
+                "Tăng chi phí",
+                "Thêm quy trình phức tạp",
+                "Mở rộng sản phẩm",
+                "Loại bỏ yếu tố không cần thiết để đơn giản hóa trải nghiệm"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Nón Xanh Dương trong Six Thinking Hats có vai trò:",
+        "options": [
+                "Điều phối và kiểm soát quy trình tư duy",
+                "Phân tích dữ liệu",
+                "Bộc lộ cảm xúc",
+                "Đưa ra rủi ro"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Nón Trắng đại diện cho:",
+        "options": [
+                "Cảm xúc",
+                "Thông tin khách quan và dữ liệu",
+                "Ý tưởng sáng tạo",
+                "Quan điểm lạc quan"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Nón Đỏ được sử dụng khi cần:",
+        "options": [
+                "Phân tích rủi ro",
+                "Đưa số liệu",
+                "Bộc lộ trực giác và cảm xúc cá nhân",
+                "Điều phối nhóm"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Nón Đen quan trọng vì:",
+        "options": [
+                "Tạo động lực",
+                "Đề xuất ý tưởng mới",
+                "Phân tích lợi ích",
+                "Nhận diện rủi ro và điểm yếu tiềm ẩn"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Khác biệt giữa Nón Vàng và Nón Xanh Lá là:",
+        "options": [
+                "Nón Vàng tập trung lợi ích, Nón Xanh Lá tập trung sáng tạo ý tưởng mới",
+                "Cả hai đều phân tích rủi ro",
+                "Cả hai đều dựa trên dữ liệu",
+                "Không có khác biệt"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Prototype chi phí thấp, thời gian ngắn nhằm:",
+        "options": [
+                "Hoàn thiện sản phẩm cuối cùng",
+                "Kiểm chứng giả thuyết nhanh và tiết kiệm nguồn lực",
+                "Gây ấn tượng nhà đầu tư",
+                "Tăng giá bán"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Think Aloud Protocol giúp:",
+        "options": [
+                "Giảm thời gian lập trình",
+                "Tăng doanh số",
+                "Hiểu cách người dùng suy nghĩ khi sử dụng sản phẩm",
+                "Thay thế khảo sát"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Một Pain Point cần đủ lớn vì:",
+        "options": [
+                "Để quảng cáo dễ hơn",
+                "Để tăng chi phí",
+                "Để cạnh tranh",
+                "Khách hàng chỉ thay đổi khi vấn đề đủ nghiêm trọng"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Emotional Pain Point liên quan đến:",
+        "options": [
+                "Cảm xúc như lo lắng, xấu hổ, thiếu tự tin",
+                "Giá cả cao",
+                "Thiếu tính năng",
+                "Thời gian xử lý"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Social Pain Point ảnh hưởng đến:",
+        "options": [
+                "Dòng tiền",
+                "Hình ảnh, uy tín và vị thế xã hội của khách hàng",
+                "Tốc độ xử lý",
+                "Quy trình nội bộ"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Functional Pain khác Financial Pain ở chỗ:",
+        "options": [
+                "Functional liên quan chi phí",
+                "Financial liên quan hiệu suất",
+                "Functional liên quan hiệu quả sử dụng, Financial liên quan tiền bạc",
+                "Không khác nhau"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Human-centered design nghĩa là:",
+        "options": [
+                "Lấy công nghệ làm trung tâm",
+                "Lấy doanh thu làm trung tâm",
+                "Lấy nhà đầu tư làm trung tâm",
+                "Lấy nhu cầu và trải nghiệm người dùng làm trung tâm"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Thu thập phản hồi định tính hiệu quả bằng cách:",
+        "options": [
+                "Phỏng vấn sâu và quan sát hành vi",
+                "Chỉ dùng số liệu analytics",
+                "Tự suy đoán",
+                "Đọc báo cáo tài chính"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Trong SCAMPER, thay thế một bộ phận thuộc chữ:",
+        "options": [
+                "Adapt",
+                "Substitute",
+                "Eliminate",
+                "Reverse"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Design Thinking yêu cầu thử nghiệm và lặp lại vì:",
+        "options": [
+                "Để kéo dài dự án",
+                "Để tăng chi phí",
+                "Giải pháp cần được cải tiến liên tục dựa trên phản hồi thực tế",
+                "Vì đó là quy định"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+}
     ];
 
-    /* ==========================================
-       QUIZ DATABASE PART 2 (20 QUESTIONS - CH 7-8)
-       ========================================== */
     const quizDataPart2 = [
-      {
-        question: "Chữ ký số (Digital Signature) cung cấp dịch vụ an toàn nào sau đây mà mã xác thực thông điệp (MAC) **không** cung cấp được?",
-        options: ["Tính bí mật", "Tính toàn vẹn", "Tính chống chối cãi (Non-repudiation)", "Tính xác thực nguồn gốc"],
-        answer: 2,
-        explanation: "Chữ ký số sử dụng mật mã bất đối xứng (khóa bí mật của người gửi để ký), do đó người gửi không thể chối bỏ việc đã ký thông điệp đó. Trong khi đó, MAC sử dụng khóa đối xứng chia sẻ giữa hai bên nên bất kỳ bên nào cũng có khả năng tạo ra mã MAC, do đó không cung cấp được tính chống chối cãi."
-      },
-      {
-        question: "Trong lược đồ chữ ký số RSA, để ký một thông điệp M, người gửi A sẽ thực hiện phép toán nào với khóa của mình?",
-        options: [
-          "Mã hóa bản băm của M bằng khóa công khai của A",
-          "Mã hóa bản băm của M bằng khóa bí mật của A",
-          "Giải mã M bằng khóa công khai của người nhận",
-          "Mã hóa bản băm của M bằng khóa bí mật của người nhận"
+{
+        "question": "Kết hợp Nón Trắng và Nón Xanh Lá giúp:",
+        "options": [
+                "Tăng cảm xúc",
+                "Giảm dữ liệu",
+                "Tránh sáng tạo",
+                "Dựa trên dữ liệu để phát triển ý tưởng mới"
         ],
-        answer: 1,
-        explanation: "Để ký số trên thông điệp M, người gửi A trước hết tính bản băm (hash) của M, sau đó tiến hành mã hóa (ký) bản băm này bằng khóa bí mật (Private Key) của mình."
-      },
-      {
-        question: "Để kiểm tra chữ ký số RSA của người gửi A trên thông điệp M, người nhận B sẽ dùng khóa nào để giải mã chữ ký?",
-        options: ["Khóa công khai của A", "Khóa bí mật của A", "Khóa công khai của B", "Khóa bí mật của B"],
-        answer: 0,
-        explanation: "Để xác thực chữ ký của người gửi A, người nhận B dùng khóa công khai (Public Key) của A để giải mã chữ ký nhằm thu về bản băm ban đầu, sau đó đối chiếu bản băm đó với bản băm tự tính từ thông điệp M."
-      },
-      {
-        question: "Chứng thư số X.509 được sử dụng để liên kết điều gì?",
-        options: [
-          "Tên người dùng và địa chỉ IP",
-          "Khóa công khai và danh tính của thực thể sở hữu",
-          "Khóa bí mật và khóa công khai",
-          "Tên miền và giao thức bảo mật"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Chữ Combine trong SCAMPER nghĩa là:",
+        "options": [
+                "Kết hợp hai hoặc nhiều yếu tố để tạo giá trị mới",
+                "Loại bỏ yếu tố",
+                "Đảo ngược quy trình",
+                "Thay thế nhân sự"
         ],
-        answer: 1,
-        explanation: "Chứng thư số X.509 là tài liệu số hóa do tổ chức tin cậy ban hành, dùng để xác thực và liên kết một khóa công khai (Public Key) cụ thể với thông tin danh tính của thực thể sở hữu khóa đó."
-      },
-      {
-        question: "Thành phần nào chịu trách nhiệm ký và ban hành chứng thư số (Digital Certificate) trong hệ thống hạ tầng khóa công khai PKI?",
-        options: ["RA (Registration Authority)", "CA (Certificate Authority)", "KDC (Key Distribution Center)", "TTP (Trusted Third Party)"],
-        answer: 1,
-        explanation: "CA (Certificate Authority) là Tổ chức chứng thực chứng chỉ uy tín hàng đầu, giữ vai trò kiểm tra tính xác thực thông tin và thực hiện ký số ban hành các chứng thư số trong PKI."
-      },
-      {
-        question: "Giao thức SSL/TLS hoạt động ở tầng nào trong mô hình OSI?",
-        options: [
-          "Tầng mạng (Network Layer)",
-          "Tầng liên kết dữ liệu (Data Link Layer)",
-          "Giữa tầng truyền tải (Transport) và tầng ứng dụng (Application)",
-          "Tầng vật lý (Physical Layer)"
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Quan sát hành vi quan trọng vì:",
+        "options": [
+                "Người dùng luôn nói chính xác",
+                "Hành vi thực tế thường khác lời họ nói",
+                "Giảm chi phí",
+                "Thay thế prototype"
         ],
-        answer: 2,
-        explanation: "SSL/TLS chạy ngay trên giao thức tầng truyền tải (như TCP) để thiết lập một kênh truyền bảo mật cho các giao thức tầng ứng dụng chạy phía trên nó (như HTTP, FTP, SMTP)."
-      },
-      {
-        question: "Trong quá trình thiết lập kết nối SSL/TLS (Handshake), khóa đối xứng dùng để mã hóa dữ liệu truyền sau đó được trao đổi bằng cách nào?",
-        options: [
-          "Truyền trực tiếp dưới dạng rõ",
-          "Được mã hóa bằng khóa công khai của máy chủ thu được từ chứng thư số",
-          "Được mã hóa bằng khóa bí mật của máy khách",
-          "Được sinh ra ngẫu nhiên và không cần trao đổi"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Empathy Map gồm các yếu tố chính như:",
+        "options": [
+                "Doanh thu – Chi phí – Lợi nhuận",
+                "Tính năng – Giá – Marketing",
+                "Nghĩ – Thấy – Nghe – Nói/Làm – Cảm nhận – Nỗi đau/Lợi ích",
+                "SWOT"
         ],
-        answer: 1,
-        explanation: "Trong bước bắt tay (Handshake), máy khách sẽ sinh ngẫu nhiên một khóa bí mật phiên (pre-master secret), mã hóa nó bằng khóa công khai của máy chủ (lấy từ chứng thư số X.509 của máy chủ) rồi gửi đi. Chỉ có máy chủ có khóa bí mật tương ứng mới giải mã được."
-      },
-      {
-        question: "Giao thức IPSec hoạt động ở tầng nào của mô hình TCP/IP?",
-        options: ["Tầng ứng dụng (Application)", "Tầng liên kết (Link)", "Tầng Internet/Mạng (Network)", "Tầng truyền tải (Transport)"],
-        answer: 2,
-        explanation: "IPSec là bộ tiêu chuẩn bảo mật hoạt động trực tiếp ở tầng Internet/Mạng (IP Layer), cung cấp các cơ chế mã hóa, xác thực toàn bộ lưu lượng IP đi qua mà không phụ thuộc vào ứng dụng đầu cuối."
-      },
-      {
-        question: "Trong IPSec, chế độ nào thực hiện mã hóa toàn bộ gói tin IP gốc bao gồm cả phần Header gốc?",
-        options: [
-          "Chế độ vận chuyển (Transport Mode)",
-          "Chế độ đường hầm (Tunnel Mode)",
-          "Chế độ bảo mật (Security Mode)",
-          "Chế độ liên kết (Association Mode)"
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "“Không phán xét” trong tư duy phân kỳ nhằm:",
+        "options": [
+                "Tăng kiểm soát",
+                "Loại bỏ ý tưởng",
+                "Rút ngắn thời gian",
+                "Khuyến khích tối đa hóa số lượng ý tưởng"
         ],
-        answer: 1,
-        explanation: "Ở chế độ đường hầm (Tunnel Mode), toàn bộ gói tin IP ban đầu bao gồm cả IP Header gốc sẽ được mã hóa và bọc trong một gói tin IP mới. Đây là chế độ tiêu chuẩn dùng để tạo các kết nối VPN an toàn giữa các Gateway mạng."
-      },
-      {
-        question: "Giao thức AH (Authentication Header) trong IPSec cung cấp các dịch vụ an toàn nào?",
-        options: [
-          "Tính bí mật và xác thực",
-          "Tính xác thực nguồn gốc, tính toàn vẹn và chống phát lại (không mã hóa)",
-          "Chỉ cung cấp tính bí mật",
-          "Chỉ cung cấp tính chống phát lại"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Trong Problem Statement, khách hàng mục tiêu cần:",
+        "options": [
+                "Cụ thể và xác định rõ phân khúc",
+                "Càng rộng càng tốt",
+                "Không cần xác định",
+                "Chỉ dựa vào độ tuổi"
         ],
-        answer: 1,
-        explanation: "Giao thức AH cung cấp tính xác thực nguồn gốc gói tin, tính toàn vẹn dữ liệu và cơ chế chống phát lại gói tin. Điểm lưu ý quan trọng là AH KHÔNG cung cấp tính bí mật vì nó không thực hiện mã hóa dữ liệu."
-      },
-      {
-        question: "Giao thức ESP (Encapsulating Security Payload) trong IPSec khác gì so với AH?",
-        options: [
-          "ESP không cung cấp tính toàn vẹn",
-          "ESP cung cấp thêm tính bí mật dữ liệu bằng cách mã hóa",
-          "ESP hoạt động ở tầng ứng dụng",
-          "ESP không sử dụng khóa đối xứng"
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Design Thinking mạnh với Tech Startup vì:",
+        "options": [
+                "Giảm nhân sự",
+                "Giúp giảm rủi ro bằng thử nghiệm sớm với người dùng",
+                "Tăng vốn nhanh",
+                "Tăng marketing"
         ],
-        answer: 1,
-        explanation: "ESP nổi trội hơn AH ở chỗ nó cung cấp thêm tính bí mật của dữ liệu (Confidentiality) bằng cách sử dụng các thuật toán mã hóa đối xứng để che giấu nội dung thông tin gói tin."
-      },
-      {
-        question: "Hệ thống PGP (Pretty Good Privacy) được thiết kế chủ yếu để bảo mật cho dịch vụ nào?",
-        options: ["Duyệt web (HTTP)", "Truyền file (FTP)", "Thư điện tử (Email)", "Truy cập từ xa (Telnet)"],
-        answer: 2,
-        explanation: "PGP (Pretty Good Privacy) là một phần mềm mã hóa và ký số nổi tiếng, được thiết kế ban đầu và sử dụng phổ biến nhất để bảo vệ an toàn cho thư điện tử (email) và các tệp tin lưu trữ cục bộ."
-      },
-      {
-        question: "Trong PGP, để gửi một email vừa bảo mật vừa xác thực cho B, người gửi A sẽ làm gì?",
-        options: [
-          "Ký bằng khóa bí mật của B rồi mã hóa bằng khóa công khai của A",
-          "Ký bằng khóa bí mật của A rồi mã hóa bằng khóa công khai của B",
-          "Ký bằng khóa công khai của A rồi mã hóa bằng khóa bí mật của B",
-          "Ký bằng khóa công khai của B rồi mã hóa bằng khóa bí mật của A"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Hiểu đúng Pain Point giúp:",
+        "options": [
+                "Tăng chi phí",
+                "Làm sản phẩm phức tạp",
+                "Xây dựng Value Proposition phù hợp",
+                "Giảm dữ liệu"
         ],
-        answer: 1,
-        explanation: "Để đạt cả 2 mục tiêu: người gửi A trước tiên ký số email bằng khóa bí mật (Private Key) của mình để người nhận kiểm tra nguồn gốc và chống chối cãi, sau đó mã hóa toàn bộ email bằng khóa công khai (Public Key) của người nhận B để bảo vệ tính bí mật thông tin."
-      },
-      {
-        question: "Tường lửa trạng thái (Stateful Inspection Firewall) khác tường lửa lọc gói tin thông thường (Packet Filtering Firewall) ở điểm nào?",
-        options: [
-          "Lọc gói tin dựa trên địa chỉ IP",
-          "Theo dõi trạng thái của các kết nối đang hoạt động và kiểm tra xem gói tin có thuộc kết nối hợp lệ hay không",
-          "Hoạt động chậm hơn và kém an toàn hơn",
-          "Chỉ lọc được giao thức HTTP"
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Prototype giúp giảm hiểu lầm vì:",
+        "options": [
+                "Là tài liệu dài",
+                "Chỉ dành cho kỹ sư",
+                "Thay thế giao tiếp",
+                "Minh họa trực quan để hai bên cùng nhìn thấy và phản hồi"
         ],
-        answer: 1,
-        explanation: "Tường lửa trạng thái duy trì bảng trạng thái (state table) để theo dõi các phiên kết nối đang mở (như TCP Handshake). Gói tin đến chỉ được cho phép đi qua nếu nó thuộc về một kết nối hợp lệ đã được thiết lập trước đó, tránh được nhiều đòn tấn công giả mạo gói tin đơn lẻ."
-      },
-      {
-        question: "Hệ thống phát hiện xâm nhập IDS (Intrusion Detection System) khác hệ thống ngăn chặn xâm nhập IPS (Intrusion Prevention System) ở điểm nào?",
-        options: [
-          "IDS chỉ giám sát và đưa ra cảnh báo còn IPS có khả năng chủ động ngăn chặn cuộc tấn công khi phát hiện",
-          "IDS hoạt động ở tầng vật lý còn IPS hoạt động ở tầng ứng dụng",
-          "IDS an toàn hơn IPS",
-          "IDS bắt buộc phải dùng phần cứng chuyên dụng còn IPS thì không"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Rearrange trong SCAMPER nghĩa là:",
+        "options": [
+                "Thay đổi thứ tự hoặc cấu trúc để tối ưu quy trình",
+                "Loại bỏ chức năng",
+                "Thêm chi phí",
+                "Sao chép ý tưởng"
         ],
-        answer: 0,
-        explanation: "IDS hoạt động mang tính thụ động: phân tích lưu lượng mạng, phát hiện dấu hiệu bất thường và gửi cảnh báo (alert). Trong khi đó, IPS được đặt trực tiếp trên luồng truyền tải và có khả năng chủ động chặn đứng (block/drop) các hành vi tấn công ngay lập tức."
-      },
-      {
-        question: "Phương pháp phát hiện xâm nhập dựa trên chữ ký (Signature-based IDS) có nhược điểm lớn nhất là gì?",
-        options: [
-          "Tốc độ xử lý dữ liệu chậm",
-          "Không thể phát hiện được các cuộc tấn công mới chưa có trong cơ sở dữ liệu (Zero-day)",
-          "Tỷ lệ cảnh báo giả quá cao đối với các hoạt động bình thường",
-          "Yêu cầu cấu hình phần cứng cực kỳ phức tạp"
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Lean Startup giúp giảm rủi ro bằng cách:",
+        "options": [
+                "Viết kế hoạch chi tiết dài hạn",
+                "Kiểm chứng giả thuyết sớm với MVP",
+                "Tăng vốn đầu tư",
+                "Trì hoãn ra mắt"
         ],
-        answer: 1,
-        explanation: "Phương pháp dựa trên chữ ký (signature) đối chiếu gói tin với cơ sở dữ liệu các mẫu tấn công đã biết trước. Vì vậy, nhược điểm chí mạng của nó là hoàn toàn bỏ sót các cuộc tấn công mới lạ chưa có chữ ký cập nhật (Zero-day)."
-      },
-      {
-        question: "Phương pháp phát hiện bất thường (Anomaly-based IDS) hoạt động dựa trên nguyên lý nào?",
-        options: [
-          "So sánh lưu lượng mạng với các chữ ký tấn công đã biết",
-          "Xây dựng mô hình hành vi bình thường của hệ thống và cảnh báo khi có sự sai lệch đáng kể so với mô hình đó",
-          "Chỉ kiểm tra các tệp tin virus trên máy tính",
-          "Chặn tất cả các kết nối từ nước ngoài"
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Triết lý “Fail Fast – Learn Faster” nhấn mạnh:",
+        "options": [
+                "Tránh thất bại",
+                "Không thử nghiệm",
+                "Thành công ngay lần đầu",
+                "Thử nghiệm nhanh để học nhanh và điều chỉnh sớm"
         ],
-        answer: 1,
-        explanation: "Hệ thống IDS phát hiện bất thường thiết lập một hồ sơ hoạt động chuẩn (baseline) của hệ thống trong trạng thái bình thường. Khi vận hành, nếu có bất kỳ hành vi hoặc lưu lượng mạng nào sai lệch lớn so với chuẩn này, nó sẽ phát lệnh cảnh báo."
-      },
-      {
-        question: "Danh sách hủy bỏ chứng thư CRL (Certificate Revocation List) do ai công bố và cập nhật?",
-        options: ["Người dùng chứng thư số", "Các công ty trình duyệt web", "Nhà ban hành chứng thư số CA", "Nhà đăng ký RA"],
-        answer: 2,
-        explanation: "CRL chứa danh sách các chứng thư số đã bị thu hồi trước khi hết hạn sử dụng thực tế (do lộ khóa, đổi thông tin...). Danh sách này được ký số và công bố định kỳ bởi tổ chức chứng thực CA đã cấp chứng chỉ đó."
-      },
-      {
-        question: "Để bảo vệ chống lại các cuộc tấn công nghe trộm mật khẩu trên mạng WiFi công cộng, người dùng nên sử dụng dịch vụ nào?",
-        options: ["Firewall cá nhân", "VPN (Virtual Private Network)", "Phần mềm diệt virus", "Trình duyệt ẩn danh"],
-        answer: 1,
-        explanation: "VPN (Mạng riêng ảo) tạo ra một đường truyền đã được mã hóa toàn bộ dữ liệu đi từ máy tính của bạn đến máy chủ VPN, khiến cho bất kỳ kẻ xấu nào trong cùng mạng WiFi công cộng cũng không thể nghe trộm hoặc giải mã thông tin của bạn."
-      },
-      {
-        question: "Tấn công giả mạo ARP (ARP Spoofing) nhằm mục đích gì trong mạng LAN?",
-        options: [
-          "Đánh cắp băng thông Internet",
-          "Chèn địa chỉ MAC của kẻ tấn công liên kết với địa chỉ IP của cổng mặc định (Gateway) để thực hiện tấn công Man-In-The-Middle",
-          "Phá hỏng card mạng của máy nạn nhân",
-          "Đổi mật khẩu của bộ định tuyến"
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Build – Measure – Learn gồm:",
+        "options": [
+                "Xây dựng – Đo lường – Học hỏi và cải tiến",
+                "Lập kế hoạch – Gọi vốn – Mở rộng",
+                "Thiết kế – Bán – Lợi nhuận",
+                "Ý tưởng – Marketing – Scale"
         ],
-        answer: 1,
-        explanation: "ARP Spoofing gửi thông điệp ARP giả mạo để liên kết địa chỉ MAC của kẻ tấn công với địa chỉ IP của Default Gateway. Dữ liệu từ máy tính nạn nhân đi ra ngoài sẽ đi nhầm vào card mạng của kẻ tấn công, tạo điều kiện thực hiện nghe lén và chỉnh sửa thông tin (Man-In-The-Middle)."
-      }
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Lean Startup ưu tiên giả thuyết kiểm chứng hơn kế hoạch cố định vì:",
+        "options": [
+                "Kế hoạch không quan trọng",
+                "Giảm trách nhiệm",
+                "Thị trường thay đổi và cần học hỏi liên tục từ dữ liệu thực tế",
+                "Để tăng chi phí"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "MVP (Minimum Viable Product) là:",
+        "options": [
+                "Sản phẩm giá rẻ nhất có thể",
+                "Phiên bản tối thiểu đủ để kiểm chứng giả thuyết với khách hàng thật",
+                "Sản phẩm hoàn chỉnh 100%",
+                "Bản demo nội bộ"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Một MVP tốt phải đo lường được:",
+        "options": [
+                "Số lượt thích trên mạng xã hội",
+                "Mức độ hài lòng giả định",
+                "Hành vi thực tế của khách hàng (mua, đăng ký, sử dụng)",
+                "Số nhân viên tham gia"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Landing Page MVP chủ yếu nhằm:",
+        "options": [
+                "Hoàn thiện UI/UX",
+                "Gọi vốn",
+                "Kiểm tra mức độ quan tâm và ý định đăng ký/mua của khách hàng",
+                "Giảm chi phí quảng cáo"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Vanity metrics là:",
+        "options": [
+                "Chỉ số bề nổi không phản ánh giá trị thực (ví dụ: lượt like)",
+                "Chỉ số doanh thu",
+                "Tỷ lệ giữ chân khách hàng",
+                "Chi phí chuyển đổi"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Startup cần tránh Vanity metrics vì:",
+        "options": [
+                "Khó đo lường",
+                "Không giúp đưa ra quyết định chiến lược chính xác",
+                "Tốn chi phí",
+                "Ít phổ biến"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Giai đoạn Learn trong chu trình BML giúp:",
+        "options": [
+                "Tăng marketing",
+                "Viết lại toàn bộ sản phẩm",
+                "Mở rộng quy mô ngay",
+                "Phân tích dữ liệu để rút ra bài học và quyết định Pivot hay Persevere"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Pivot là:",
+        "options": [
+                "Thay đổi chiến lược dựa trên dữ liệu học được",
+                "Thất bại hoàn toàn",
+                "Tăng vốn đầu tư",
+                "Dừng dự án"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Startup nên cân nhắc Pivot khi:",
+        "options": [
+                "Được nhiều lời khen",
+                "Có nhiều lượt truy cập",
+                "Giả thuyết cốt lõi không được xác nhận bởi dữ liệu",
+                "Có nhân sự mới"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Nếu người dùng không sẵn sàng trả tiền, điều đó cho thấy:",
+        "options": [
+                "Sản phẩm đã hoàn hảo",
+                "Marketing tốt",
+                "Nhu cầu rất cao",
+                "Value Proposition chưa đủ mạnh hoặc chưa đúng phân khúc"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Sai lầm phổ biến của sinh viên CNTT khi làm Startup là:",
+        "options": [
+                "Xây sản phẩm quá lớn trước khi kiểm chứng nhu cầu",
+                "Hỏi ý kiến khách hàng",
+                "Làm MVP",
+                "Đo lường dữ liệu"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Demo IoT đơn giản để kiểm chứng nhu cầu nhằm:",
+        "options": [
+                "Gọi vốn nhanh",
+                "Kiểm tra tính khả thi và phản hồi thực tế trước khi đầu tư lớn",
+                "Tăng độ phức tạp",
+                "Tối đa hóa lợi nhuận"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Success metric của MVP cần:",
+        "options": [
+                "Càng nhiều càng tốt",
+                "Chung chung",
+                "Cụ thể, đo lường được và gắn với hành vi quan trọng",
+                "Không cần rõ ràng"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Ra quyết định trong Lean Startup dựa trên:",
+        "options": [
+                "Cảm tính",
+                "Kinh nghiệm cá nhân",
+                "Linh cảm",
+                "Dữ liệu và bằng chứng thực nghiệm"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Build–Measure–Learn là vòng lặp liên tục vì:",
+        "options": [
+                "Thị trường thay đổi và cần cải tiến liên tục",
+                "Để tăng thời gian phát triển",
+                "Để trì hoãn ra mắt",
+                "Do quy định bắt buộc"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "MVP giúp tiết kiệm nguồn lực bằng cách:",
+        "options": [
+                "Tăng nhân sự",
+                "Tránh xây dựng sản phẩm đầy đủ khi chưa kiểm chứng nhu cầu",
+                "Mở rộng văn phòng",
+                "Tăng quảng cáo"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Khi giả thuyết công nghệ sai, Startup nên:",
+        "options": [
+                "Bỏ cuộc",
+                "Giữ nguyên kế hoạch",
+                "Gọi vốn thêm",
+                "Pivot sang hướng phù hợp hơn dựa trên dữ liệu"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Chuyển từ Prototype sang MVP cần:",
+        "options": [
+                "Thêm yếu tố đo lường và kiểm chứng thị trường thật",
+                "Tăng tính thẩm mỹ",
+                "Mở rộng quy mô lớn",
+                "Tăng chi phí"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Phản hồi định tính trong giai đoạn Measure giúp:",
+        "options": [
+                "Tăng doanh thu",
+                "Giảm chi phí",
+                "Hiểu sâu động cơ, cảm nhận và khó khăn của người dùng",
+                "Thay thế dữ liệu định lượng"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Persevere khó hơn Pivot vì:",
+        "options": [
+                "Tốn chi phí",
+                "Cần kiên định khi dữ liệu chưa rõ ràng nhưng vẫn có tín hiệu tích cực",
+                "Phải thay đổi toàn bộ",
+                "Ít rủi ro"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Áp dụng Lean khi phát triển tính năng mới nghĩa là:",
+        "options": [
+                "Xây hoàn chỉnh rồi test",
+                "Không cần đo lường",
+                "Dựa vào cảm giác",
+                "Phát hành phiên bản nhỏ, đo lường phản hồi rồi cải tiến"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Business Model Canvas gồm:",
+        "options": [
+                "9 khối chính liên kết với nhau",
+                "7 khối",
+                "5 khối",
+                "12 khối"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Value Proposition trả lời câu hỏi:",
+        "options": [
+                "Ai là khách hàng?",
+                "Tại sao khách hàng chọn bạn thay vì đối thủ?",
+                "Chi phí bao nhiêu?",
+                "Ai là đối tác?"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Customer Relationship trong BMC liên quan đến:",
+        "options": [
+                "Nguồn lực chính",
+                "Doanh thu",
+                "Cách doanh nghiệp tương tác và giữ chân khách hàng",
+                "Cấu trúc chi phí"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Mô hình Subscription hấp dẫn vì:",
+        "options": [
+                "Tạo dòng doanh thu định kỳ và ổn định",
+                "Giảm khách hàng",
+                "Tăng chi phí",
+                "Không cần giữ chân khách"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Trong Startup AI, Data quan trọng vì:",
+        "options": [
+                "Tăng marketing",
+                "Giảm chi phí",
+                "Tăng nhân sự",
+                "Là tài nguyên cốt lõi để huấn luyện và cải thiện mô hình"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Viral Loop khác Referral ở chỗ:",
+        "options": [
+                "Giống nhau hoàn toàn",
+                "Viral Loop tích hợp tự nhiên trong sản phẩm, Referral thường cần khuyến khích bên ngoài",
+                "Referral không cần khách hàng",
+                "Viral Loop không mở rộng được"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Pre-seed thường dùng để:",
+        "options": [
+                "Phát triển MVP và kiểm chứng thị trường ban đầu",
+                "IPO",
+                "Mở rộng toàn cầu",
+                "Mua lại công ty khác"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Product–Market Fit đạt được khi:",
+        "options": [
+                "Có nhiều lượt like",
+                "Có văn phòng lớn",
+                "Sản phẩm đáp ứng nhu cầu thị trường rõ ràng và có tăng trưởng tự nhiên",
+                "Có nhiều nhân sự"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "TAM – SAM – SOM dùng để:",
+        "options": [
+                "Tính lợi nhuận",
+                "Phân tích chi phí",
+                "Đánh giá công nghệ",
+                "Ước lượng quy mô thị trường"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Không nên gọi vốn khi chỉ có ý tưởng vì:",
+        "options": [
+                "Chưa có bằng chứng kiểm chứng nhu cầu thị trường",
+                "Nhà đầu tư không tồn tại",
+                "Ý tưởng không quan trọng",
+                "Thiếu marketing"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Trong Rubric, Insight được đánh giá cao vì:",
+        "options": [
+                "Tăng chi phí",
+                "Hiểu sâu vấn đề quyết định chất lượng giải pháp",
+                "Giảm thời gian",
+                "Tăng số slide"
+        ],
+        "answer": 1,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Giải pháp AI/IoT/App đạt điểm cao khi:",
+        "options": [
+                "Phức tạp tối đa",
+                "Đắt tiền",
+                "Giải quyết đúng vấn đề thực tế và khả thi triển khai",
+                "Có nhiều tính năng"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Slide Roadmap thể hiện:",
+        "options": [
+                "Kế hoạch phát triển sản phẩm theo thời gian",
+                "Doanh thu hiện tại",
+                "Danh sách nhân viên",
+                "Logo công ty"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Chứng minh mô hình sinh lợi cần:",
+        "options": [
+                "Ý tưởng sáng tạo",
+                "Văn phòng đẹp",
+                "Logo ấn tượng",
+                "Logic doanh thu – chi phí rõ ràng và có dữ liệu minh chứng"
+        ],
+        "answer": 3,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Key Partners trong BMC giúp:",
+        "options": [
+                "Tận dụng nguồn lực và giảm rủi ro vận hành",
+                "Tăng chi phí",
+                "Giảm khách hàng",
+                "Tăng cạnh tranh"
+        ],
+        "answer": 0,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+},
+{
+        "question": "Vai trò quan trọng nhất của BMC là:",
+        "options": [
+                "Trang trí slide",
+                "Gọi vốn nhanh",
+                "Hệ thống hóa toàn bộ logic mô hình kinh doanh trên một trang",
+                "Tăng nhân sự"
+        ],
+        "answer": 2,
+        "explanation": "Đáp án được kiểm chứng theo tài liệu môn học Khởi nghiệp và Đổi mới Sáng tạo."
+}
     ];
+
+    
 
     /* ==========================================
        APPLICATION CONTROL STATE
@@ -1823,6 +2458,17 @@
     });
 
     /* ==========================================
+       SHUFFLE ARRAY ALGORITHM
+       ========================================== */
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    /* ==========================================
        PART SELECTION CONTROL
        ========================================== */
     function togglePart(partNum) {
@@ -1839,14 +2485,14 @@
         check1.style.color = 'var(--primary)';
         check2.style.color = 'transparent';
         
-        document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **40 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
+        document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **50 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
       } else {
         label2.classList.add('active');
         label1.classList.remove('active');
         check2.style.color = 'var(--primary)';
         check1.style.color = 'transparent';
         
-        document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **20 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
+        document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **50 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
       }
     }
 
@@ -1855,7 +2501,30 @@
        ========================================== */
     function startQuiz(mode) {
       currentMode = mode;
-      activeQuizData = selectedPart === 1 ? quizDataPart1 : quizDataPart2;
+      
+      // Get selected raw questions
+      let rawData = selectedPart === 1 ? quizDataPart1 : quizDataPart2;
+      
+      // Deep clone to avoid modifying original arrays
+      let clonedData = JSON.parse(JSON.stringify(rawData));
+      
+      // 1. Shuffle options inside each question if enabled
+      const shouldShuffleOptions = document.getElementById('shuffle-options-toggle').checked;
+      if (shouldShuffleOptions) {
+        clonedData.forEach(q => {
+          const correctText = q.options[q.answer];
+          shuffleArray(q.options);
+          q.answer = q.options.indexOf(correctText);
+        });
+      }
+
+      // 2. Shuffle questions order if enabled
+      const shouldShuffleQuestions = document.getElementById('shuffle-questions-toggle').checked;
+      if (shouldShuffleQuestions) {
+        shuffleArray(clonedData);
+      }
+
+      activeQuizData = clonedData;
       currentQuestionIdx = 0;
       userAnswers = Array(activeQuizData.length).fill(null);
       practiceStates = Array(activeQuizData.length).fill(null);
@@ -2125,8 +2794,8 @@
         
         timerDisplay.innerText = timeStr;
 
-        // Warning state when time < 5 minutes (300s) or 2 minutes for part 2
-        const warningTime = activeQuizData.length === 40 ? 300 : 120;
+        // Warning state when time is low
+        const warningTime = 300; // 5 minutes warning
         if (timeRemaining < warningTime) {
           timerBox.classList.add('warning');
         }
