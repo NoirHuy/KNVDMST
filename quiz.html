@@ -1093,6 +1093,15 @@
             </div>
             <div class="part-check-icon">✓</div>
           </label>
+          
+          <label class="part-select-card" for="part-3" id="label-part-3">
+            <input type="radio" name="part-selection" id="part-3" value="3" onchange="togglePart(3)" style="display: none;">
+            <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+              <span class="part-title" style="font-weight: 700; font-size: 1.05rem;">200 câu hỏi từ stodocu</span>
+              <span class="part-desc" style="font-size: 0.8rem; color: var(--text-muted);">Bộ 209 câu hỏi ôn tập tổng hợp môn Khởi nghiệp và Đổi mới Sáng tạo từ Studocu (Doanh nghiệp, mô hình Canvas, Báo cáo tài chính, quản trị nhân sự)...</span>
+            </div>
+            <div class="part-check-icon">✓</div>
+          </label>
         </div>
       </div>
 
@@ -2433,6 +2442,2517 @@
 }
     ];
 
+    const quizDataPart3 = [
+        {
+                "id": "1",
+                "question": "Doanh nhân là người được hiểu như thế nào?",
+                "options": [
+                        "Người người bắt đầu việc kinh doanh riêng của họ",
+                        "Một người làm nghề tự do",
+                        "Một nhân viên văn phòng",
+                        "Một người độc lập (không thuộc công ty)"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "2",
+                "question": "Để trở thành một doanh nhân, bạn cần phải có những điều gì sau đây?",
+                "options": [
+                        "Doanh nhân cần có tài năng",
+                        "Doanh nhân cần có nhiều tiền",
+                        "Doanh nhân cần có sự may mắn",
+                        "Doanh nhân không bắt buộc cần có tất cả các điều trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "3",
+                "question": "Một đặc điểm chung mà các doanh nhân thường có là:",
+                "options": [
+                        "Rất lười biếng",
+                        "Sự tự tin",
+                        "Tóc màu sáng",
+                        "Được miễn vào đại học"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "4",
+                "question": "Đâu thường KHÔNG PHẢI là đặc điểm chung của doanh nhân?",
+                "options": [
+                        "Cẩn trọng (Careful)",
+                        "Tự tin (Confidence)",
+                        "Giao tiếp xã hội tốt (Gregarious)",
+                        "Lo xa (Forward thinking)"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "5",
+                "question": "Quá trình mà các cá nhân theo đuổi cơ hội kinh doanh, mà không quan tâm đến các nguồn lực mà họ hiện đang kiểm soát được hiểu là gì?",
+                "options": [
+                        "Quản lý khởi sự",
+                        "Tinh thần khởi nghiệp",
+                        "Phân tích tài chính",
+                        "Lập kế hoạch khả thi"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "6",
+                "question": "Một cá nhân bắt đầu, thành lập và quản lý một doanh nghiệp mới được gọi là:",
+                "options": [
+                        "Một nhà lãnh đạo",
+                        "Một nhà quản lý",
+                        "Một nhà chuyên môn",
+                        "Một doanh nhân"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "7",
+                "question": "Các doanh nhân được thúc đẩy bởi yếu tố ?",
+                "options": [
+                        "Tài chính",
+                        "Giá trị cá nhân",
+                        "Tinh thần kinh doanh",
+                        "Tất cả các điều trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "8",
+                "question": "Cá nhân nào ảnh hưởng đến sự lựa chọn và phong cách nghề nghiệp của một doanh nhân?",
+                "options": [
+                        "Người giữ vai trò hướng nghiệp",
+                        "Người định hướng đạo đức",
+                        "Người hỗ trợ chuyên nghiệp",
+                        "Người hỗ trợ không chuyên"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "9",
+                "question": "Doanh nhân thường có kiểu tư duy như thế nào?",
+                "options": [
+                        "Lạc quan và có khả năng xác định tương lai",
+                        "Bi quan và không có khả năng xác định tương lai",
+                        "Bi quan và có khả năng xác định tương lai",
+                        "Lạc quan và không có khả năng xác định tương lai"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "10",
+                "question": "Điều đầu tiên một doanh nhân làm khi bắt đầu kinh doanh nói chung là gì?",
+                "options": [
+                        "Thu thập tài nguyên",
+                        "Thuê văn phòng",
+                        "Nhận ra cơ hội kinh doanh",
+                        "Hỏi tất cả bạn bè"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "11",
+                "question": "Tất cả hoạt động kinh doanh đều có bốn giai đoạn riêng biệt. Giai đoạn nào sau đây có thể xảy ra sự suy giảm?",
+                "options": [
+                        "Trưởng thành (Maturity)",
+                        "Phát triển (Growth)",
+                        "Khởi động (Prelaunch)",
+                        "Cạnh tranh (Startup)"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "12",
+                "question": "Các doanh nhân có hoạt động kinh doanh phụ có xu hướng tìm kiếm điều gì khi bắt đầu kinh doanh?",
+                "options": [
+                        "Rủi ro nhỏ",
+                        "Thu nhập bổ sung",
+                        "Thời gian cam kết ít",
+                        "Tất cả những điều trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "13",
+                "question": "Doanh nhân theo phong cách sống là gì?",
+                "options": [
+                        "Một người muốn khởi nghiệp liên quan đến lối sống lành mạnh",
+                        "Một người nào đó đang tìm cách kiếm một số tiền nhất định để sống một lối sống cụ thể",
+                        "Một doanh nhân đặt ra một công việc kinh doanh phụ để sống một lối sống cụ thể",
+                        "Một người muốn có thu nhập cao và chỉ làm việc 40 giờ một tuần"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "14",
+                "question": "Doanh nhân có xu hướng hoạt động xã hội tương tự như thế nào?",
+                "options": [
+                        "Các tổ chức phi lợi nhuận",
+                        "Tổ chức từ thiện",
+                        "Người gây quỹ",
+                        "Các nhà từ thiện"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "15",
+                "question": "Loại hình kinh doanh nào cần sự nỗ lực kiên trì, bền vững nhất mới có thể đi đến thành công?",
+                "options": [
+                        "Khởi nghiệp",
+                        "Kinh doanh theo phong cách sống",
+                        "Kinh doanh phụ",
+                        "Tất cả đều sai"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "16",
+                "question": "Doanh nhân khởi nghiệp (startup) là?",
+                "options": [
+                        "Người chấp nhận rủi ro vừa phải",
+                        "Người chấp nhận rủi ro cao",
+                        "Người né tránh",
+                        "Cả B và C đúng"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "17",
+                "question": "Điều gì có thể tạo cho một cá nhân có động lực để bắt đầu một dự án kinh doanh mới?",
+                "options": [
+                        "Phần thưởng tài chính",
+                        "Khát vọng độc lập",
+                        "Chấp nhận rủi ro",
+                        "Tất cả những điều trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "18",
+                "question": "Đâu là nhận định SAI về Doanh nhân xã hội?",
+                "options": [
+                        "Doanh nhân xã hội có thể phân phối giá trị của mình bằng hoạt động từ thiện.",
+                        "Doanh nhân xã hội hoạt động như là 1 tổ chức từ thiện.",
+                        "Doanh nhân xã hội xây dựng các hệ thống hoạt động có lợi cho cộng đồng nhưng cũng đem về doanh thu cho doanh nghiệp.",
+                        "Doanh thu/lợi nhuận từ các hoạt động xã hội được tái đầu tư cho các dự án hoạt động tiếp theo."
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "19",
+                "question": "Đâu KHÔNG PHẢI là đặc điểm của 1 doanh nhân khởi nghiệp",
+                "options": [
+                        "Ý tưởng lớn",
+                        "Rủi ro lớn",
+                        "Phần thưởng nhỏ",
+                        "Tham vọng lớn"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "20",
+                "question": "Các sản phẩm và dịch vụ công nghệ mới:",
+                "options": [
+                        "Hiếm khi kiếm được tiền",
+                        "Chỉ thành công trước khi Internet phổ biến",
+                        "Có thể thành công cao",
+                        "Không cần xem xét đến sự bảo vệ của pháp luật"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "21",
+                "question": "Một thoả thuận kinh doanh trong đó một bên cho phép một bên khác sử dụng tên doanh nghiệp và bán các sản phẩm hoặc dịch vụ của mình được gọi là gì?",
+                "options": [
+                        "Hợp tác xã",
+                        "Nhượng quyền thương mại",
+                        "Doanh nghiệp tư nhân",
+                        "Công ty trách nhiệm hữu hạn"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "22",
+                "question": "Đặc điểm chung thường có của các doanh nhân thành đạt là:",
+                "options": [
+                        "Mong muốn đạt được phần thưởng tài chính",
+                        "Mong muốn đưa một sản phẩm hoặc dịch vụ mới mang tinh cách mạng",
+                        "Đam mê kinh doanh",
+                        "Mong muống tuyển dụng người mới"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "23",
+                "question": "Mô hình kinh doanh là gì?",
+                "options": [
+                        "Tập hợp các chiến lược bạn sử dụng để tìm kiếm khách hàng",
+                        "Cách bạn kiếm tiền dựa trên những gì bạn đang bán.",
+                        "Kế hoạch chi tiết về cách tiếp cận các cơ hội kinh doanh",
+                        "Các phương pháp sử dụng để quảng bá sản phẩm, dịch vụ của mình"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "24",
+                "question": "Phương pháp để xác thực ý tưởng kinh doanh này được gọi là gì? \"Nguyên lý hoạt động của phương pháp này là: 1.Bạn xây dựng một doanh nghiệp dựa trên một số giả tưởng về ý tưởng kinh doanh của bạn. 2. Bạn đo lường phản ứng của khách hàng khi tiếp cận doanh nghiệp giả tưởng của bạn. 3. Bạn lọc thông tin về những gì bạn làm sai. 4. Bạn tiếp tục chỉnh sửa, xây dựng lại từ đầu mô hình doanh nghiệp tinh gọn của bạn, và tiếp tục thực hiện thử nghiệm.\"",
+                "options": [
+                        "Khung khởi nghiệp tinh gọn",
+                        "Bản khảo sát",
+                        "Trao đổi với chuyên gia",
+                        "Thử nghiệm giả tưởng"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "25",
+                "question": "Đâu là nhận định đúng về phương pháp xác thực ý tưởng kinh doanh thông qua Khung khởi nghiệp tinh gọn (The lean startup framework)?",
+                "options": [
+                        "Quan điểm của khung khởi nghiệp tinh gọn là ngừng sản xuất những thứ mà mọi người không muốn mua.",
+                        "Khung khởi nghiệp tinh gọn giúp doanh nhân biết sớm hơn liệu mọi người có mua sản phẩm/dịch vụ hay không; và sau đó tiết kiệm tài nguyên và tập trung vào việc thích ứng nhanh hơn.",
+                        "Khung khởi nghiệp tinh gọn hướng tới sản phẩm cuối cùng có thể chấp nhận một cách phổ biến và giúp doanh nhân hướng tới sản phẩm cuối cùng đó một cách sớm hơn.",
+                        "Tất cả các phương án đều đúng."
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "26",
+                "question": "Bạn nên khảo sát (survey) ai để nhận phản hồi cho ý tưởng của mình?",
+                "options": [
+                        "Khách hàng tiềm năng và người trong ngành",
+                        "Bạn bè và gia đình",
+                        "Khách hàng tiềm năng và bạn bè",
+                        "Chỉ các chuyên gia trong ngành"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "27",
+                "question": "Khi nào thì bắt buộc phải trả nợ (Dept)?",
+                "options": [
+                        "Khi công ty của bạn kiếm đủ tiền để trả",
+                        "Khi công ty của bạn thất bại và bạn mất tiền",
+                        "Bạn chỉ phải trả nếu bạn muốn",
+                        "Luôn luôn bắt buộc phải trả nợ"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "28",
+                "question": "Sự khác biệt giữa vay vốn (Dept) và đầu tư cổ phần (Equity) là gì?",
+                "options": [
+                        "Không có, bạn phải trả lại cả hai",
+                        "Một khoản đầu tư có thể mang lại cho bạn nhiều tiền hơn một khoản vay",
+                        "Mọi người đều có thể vay vốn dễ dàng",
+                        "Các khoản cho vay thì phải được hoàn trả theo sinh nợ, các khoản đầu tư thì không phải hoàn trả theo sinh nợ mà hoàn trả theo cách khác như cổ tức, cổ phiếu…"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "29",
+                "question": "Nhóm người nào sao đây có thể cần kế hoạch kinh doanh",
+                "options": [
+                        "Ngân hàng",
+                        "Các nhà đầu tư",
+                        "Cố vấn",
+                        "Tất cả các ý trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "30",
+                "question": "Chúng ta cần cập nhật kế hoạch kinh doanh bởi vì:",
+                "options": [
+                        "Các yếu tố môi trường và yếu tố bên trong có thể thay đổi hướng của kế hoạch.",
+                        "Các mục tiêu do doanh nhân đặt ra có thể không hợp lý",
+                        "Các mục tiêu có thể không do lường được",
+                        "Các mục tiêu có thể không cụ thể"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "31",
+                "question": "Nhà đầu tư kinh doanh trong doanh nghiệp với vai trò gì?",
+                "options": [
+                        "Cung cấp lời khuyên cho doanh nghiệp nhỏ",
+                        "Cung cấp vốn phát triển kinh doanh để đổi lấy cổ phần trong doanh nghiệp quyền sở hữu",
+                        "Thành lập một doanh nghiệp để nhượng quyền thương mại",
+                        "Để hỗ trợ doanh nhân mạo hiểm"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "32",
+                "question": "Doanh nhân khi nhận đầu tư dưới hình thức nào sau đây là rủi ro nhất?",
+                "options": [
+                        "Vốn cổ phần",
+                        "Cổ phiếu ưu đãi",
+                        "Các khoản nợ",
+                        "Đầu tư là không có rủi ro"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "33",
+                "question": "Để cung cấp hỗ trợ tài chính cho các doanh nghiệp, chính phủ đã thành lập một số tổ chức",
+                "options": [
+                        "Cố vấn tài chính",
+                        "Các trung gian tài chính",
+                        "Không cần hỗ trợ",
+                        "Các tổ chức tài chính đầu tư mạo hiểm (Venture Capital)"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "34",
+                "question": "Điền vào chỗ trống: ________ là cách thức huy động vốn và nguồn lực để hiện thực hóa ý tưởng kinh doanh.",
+                "options": [
+                        "Gọi vốn",
+                        "Khởi nghiệp",
+                        "Xác thực ý tưởng",
+                        "Khái niệm hóa cơ hội"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "35",
+                "question": "Điều gì có thể được coi là một sự đổi mới về giá?",
+                "options": [
+                        "Cung cấp cùng một sản phẩm với giá cao hơn",
+                        "Cung cấp cùng một sản phẩm với giá thấp hơn",
+                        "Cả hai đúng",
+                        "Cả hai sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "36",
+                "question": "Loại đổi mới nào có thể giúp doanh nghiệp giảm những phức tạp không muốn?",
+                "options": [
+                        "Đổi mới tốc độ",
+                        "Đổi mới sự tiện lợi",
+                        "Đổi mới giá cả",
+                        "Đổi mới chất lượng"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "37",
+                "question": "Yếu tố nào sau đây cho phép các công ty nhỏ hoạt động như những công ty lớn?",
+                "options": [
+                        "Công nghệ",
+                        "Khách hàng",
+                        "Phát triển kinh tế",
+                        "Cạnh tranh"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "38",
+                "question": "Đổi mới có thể được định nghĩa là?",
+                "options": [
+                        "Những ý tưởng cơ bản",
+                        "Sự phát triển ý tưởng",
+                        "Đối lập với sáng tạo",
+                        "Sự khai thác thành công những ý tưởng mới"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "39",
+                "question": "Niềm đam mê có thể giúp bạn như thế nào trong công việc kinh doanh?",
+                "options": [
+                        "Bạn có thể dành nhiều thời gian hơn để làm việc mà không cảm thấy nhàm chán",
+                        "Bạn có thể bán sản phẩm của mình dễ dàng hơn",
+                        "Bạn làm tốt tất cả các công việc liên quan đến đam mê của bạn",
+                        "Bạn không quan tâm"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "40",
+                "question": "Điều gì bạn có thể dễ dàng kết hợp để nảy ra ý tưởng kinh doanh có khả năng thực hiện trên thực tế?",
+                "options": [
+                        "Kỹ năng và kinh nghiệm",
+                        "Sở thích và đam mê",
+                        "Niềm đam mê và kinh nghiệm",
+                        "Sở thích và kỹ năng"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "41",
+                "question": "Quá trình khởi sự kinh doanh bao gồm mỗi bước sau, “Ngoại trừ”",
+                "options": [
+                        "Quyết định trở thành doanh nhân",
+                        "Phát minh ra quy trình mới",
+                        "Quản lý và phát triển công ty kinh doanh",
+                        "Chuyển từ một ý tưởng sang một công ty kinh doanh."
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "42",
+                "question": "Khởi nguồn (source) lớn nhất để tạo ra ý tưởng kinh doanh là gì?",
+                "options": [
+                        "Sở thích (hobby)",
+                        "Đam mê (Passion)",
+                        "Cả 2 phương án đều đúng",
+                        "Cả 2 phương án đề sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "43",
+                "question": "Để nhận biết được ý tưởng kinh doanh nào thực sự phù hợp với bạn, bạn cần cân nhắc các yếu tố nào sau đây?",
+                "options": [
+                        "Sở thích (hobby) và đam mê (passion) của bạn.",
+                        "Kỹ năng (skill) và kinh nghiệm (experience) của bạn.",
+                        "Những sở thích, đam mê gắn liền với kỹ năng, kinh nghiệm mà bạn có.",
+                        "Không có phương án đúng."
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "44",
+                "question": "Ý tưởng kinh doanh nảy sinh dựa trên khả năng phát hiện ra vấn đề cần giải quyết. Kỹ thuật nảy sinh ý tưởng kinh doanh này là gì?",
+                "options": [
+                        "Ý tưởng kinh doanh dựa trên vấn đề",
+                        "Ý tưởng kinh doanh dựa trên lợi ích",
+                        "Tưởng tượng về tương lai",
+                        "Trí tưởng tượng đảo ngược"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "45",
+                "question": "Người dùng quyền lực (power user) là ai?",
+                "options": [
+                        "Người dùng có quyền thay đổi những gì công ty cung cấp.",
+                        "Một số ít người nhưng chiếm phần lớn thị trường",
+                        "Những người giàu có và nổi tiếng sử dụng nền tảng của bạn",
+                        "Bất kỳ người dùng nào cũng có thể trở thành người dùng quyền lực nếu họ trả phí"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "46",
+                "question": "Khi một công ty mới phát triển, doanh nhân sẽ cần phải đáp ứng những điều gì?",
+                "options": [
+                        "Thích nghi với những thay đổi của thị trường",
+                        "Đảm bảo duy trì kiểm soát tài chính",
+                        "Xây dựng đội ngũ quản lý",
+                        "Tất cả các điều trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "47",
+                "question": "Ba lý do chính mà mọi người trở thành doanh nhân và thành lập công ty riêng của họ là:",
+                "options": [
+                        "Làm ông chủ của chính họ, theo đuổi ý tưởng của riêng họ và nhận ra phần thưởng tài chính",
+                        "Tận dụng trợ cấp của chính phủ, theo đuổi ý tưởng riêng của họ và nhận phần thưởng tài chính",
+                        "Có được uy tín, nhận được phần thưởng tài chính và loại bỏ rủi ro trong cuộc sống của họ",
+                        "Chấp nhận rủi ro, làm điều mình thích, có được uy tín."
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "48",
+                "question": "Doanh nhân được hiểu là:",
+                "options": [
+                        "Con bạc",
+                        "Người không chấp nhận rủi ro",
+                        "Người may mắn",
+                        "Người chấp nhận rủi ro"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "49",
+                "question": "Kế hoạch ______________nên bao gồm các vấn đề kiểm soát để xác định tiến độ thực hiện.",
+                "options": [
+                        "Kinh doanh",
+                        "Tiếp thị",
+                        "Hoạt động",
+                        "Tài chính"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "50",
+                "question": "Người doanh nhân cần phải có các năng lực nào?",
+                "options": [
+                        "Kỹ năng sáng tạo",
+                        "Kiến thức chuyên môn",
+                        "Hiểu biết về thị trường",
+                        "Tất cả ý trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "51",
+                "question": "Yếu tố nào dưới đây là một trong những lý do chủ yếu giúp cho sự gia tăng của các doanh nghiệp có quy mô nhỏ trong xu thế phát triển hiện nay?",
+                "options": [
+                        "Sự gia tăng các tiện ích trong xã hội",
+                        "Việc tăng thuế",
+                        "Việc Internet phát triển mạnh giúp doanh nghiệp nhỏ gia tăng",
+                        "Một số người tìm kiếm sự an toàn tài chính"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "52",
+                "question": "Bước nào sau đây là bước đầu tiên của quá trình khởi nghiệp?",
+                "options": [
+                        "Phát triển các ý tưởng kinh doanh thành công",
+                        "Quyết định trở thành doanh nhân",
+                        "Phát triển công ty kinh doanh",
+                        "Chuyển một ý tưởng sang một công ty kinh doanh"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "53",
+                "question": "Quá trình mà các doanh nhân theo đuổi cơ hội mà không quan tâm đến tài nguyên mà họ đang kiểm soát được gọi là gì?",
+                "options": [
+                        "Quản lý hoạt động",
+                        "Tinh thần kinh doanh",
+                        "Phân tích tài chính",
+                        "Lập kế hoạch khả thi"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "54",
+                "question": "Lĩnh vực công nghiệp nào thúc đẩy các doanh nghiệp quy mô nhỏ khởi nghiệp và có rào cản gia nhập thị trường thấp hơn ?",
+                "options": [
+                        "Dịch vụ",
+                        "Chế tạo",
+                        "Phân phối",
+                        "Nông nghiệp"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "55",
+                "question": "Công việc đầu tiên cần triển khai trong xây dựng đội ngũ quản lý là:",
+                "options": [
+                        "Xác định chức danh nhân sự",
+                        "Đào tạo",
+                        "Đánh giá và tạo động lực nhân viên",
+                        "Tuyển dụng nhân viên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "56",
+                "question": "Để tạo niềm tin cho nhà đầu tư thì kế hoạch kinh doanh nên bắt đầu từ việc xác định:",
+                "options": [
+                        "Vốn khởi sự",
+                        "Đội ngũ quản lý",
+                        "Mô hình kinh doanh",
+                        "Sản phẩm/ dịch vụ kinh doanh"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "57",
+                "question": "Muốn giải quyết những lỗ hỏng về kỹ năng của đội ngũ quản lý bạn cần:",
+                "options": [
+                        "Mô tả chi tiết về điểm mạnh và điểm yếu của đội ngũ quản lý",
+                        "Nên có hội đồng cố vấn tư vấn giải pháp cải thiện những điểm yếu của đội ngũ quản lý",
+                        "Cả A và B đều sai",
+                        "Cả A và B đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "58",
+                "question": "Các yếu tố sau đây cần được mô tả trong phần sản phẩm/dịch vụ (Product/Service) của bản kế hoạch kinh doanh, NGOẠI TRỪ:",
+                "options": [
+                        "Đặc tính của sản phẩm",
+                        "Chiến lược truyền thông sản phẩm",
+                        "Cách thức sản xuất sản phẩm",
+                        "Kiểm soát chất lượng sản phẩm"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "59",
+                "question": "Mô tả đặc điểm chi tiết về khách hàng bao gồm:",
+                "options": [
+                        "Tuổi, giới tính, nơi sống, mức thu nhập, ngôn ngữ sử dụng,…",
+                        "Nhu cầu",
+                        "Hành vi",
+                        "Tất cả A, B, C đề đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "60",
+                "question": "_________là các yếu tố làm ngăn cản các đối thủ cạnh tranh tiềm tàng tham gia vào thị trường và cạnh tranh với công ty của bạn.",
+                "options": [
+                        "Chi phí đầu tư",
+                        "Khách hàng và thị trường",
+                        "Rào cản nhập ngành",
+                        "Hiệu ứng nền kinh tế"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "61",
+                "question": "Để xác định đối tượng khách hàng bạn muốn hướng đến và mô tả được chi tiết đặc điểm khách hàng cần:",
+                "options": [
+                        "Tìm kiếm các dữ liệu khách hàng có sẵn",
+                        "Phân tích tính hấp dẫn của ngành hàng",
+                        "Thực hiện cuộc nghiên cứu khảo sát khách hàng",
+                        "Phân khúc khách hàng"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "62",
+                "question": "Hoạt động nghiên cứu thị trường giúp doanh nghiệp:",
+                "options": [
+                        "Xác định được đối tượng khách hàng mục tiêu",
+                        "Mô tả được đặc điểm, hành vi của khách hàng",
+                        "Cả A và B đều sai",
+                        "Cả A và B đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "63",
+                "question": "Yếu tố quyết định sự tồn tại và phát triển của doanh nghiệp là:",
+                "options": [
+                        "Nhà cung ứng",
+                        "Đối tác truyền thông",
+                        "Công nghệ",
+                        "Khách hàng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "64",
+                "question": "Phân tích đối thủ cạnh tranh cần phải phân tích những yếu tốgì?",
+                "options": [
+                        "Điểm mạnh và điểm yếu",
+                        "Chính sách quản lý",
+                        "Chiến lược giá",
+                        "Tất cả câu trên đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "65",
+                "question": "Hành động nào sau đây của đối thủ cạnh tranh có thể giúp doanh nghiệp bạn dự đoán được chiến lược của họ trong tương lai?",
+                "options": [
+                        "Thông tin vị trí và lĩnh vực tuyển dụng nhân sự",
+                        "Tài trợ các hoạt động cộng đồng",
+                        "Thông cáo báo chí doanh nghiệp dừng hoạt động",
+                        "Quảng cáo sản phẩm"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "66",
+                "question": "Công ty của bạn phân phối sản phẩm hoặc dịch vụ của mình trực tiếp cho khách hàng (không qua trung gian) được gọi là:",
+                "options": [
+                        "Phân phối trực tiếp",
+                        "Phân phối gián tiếp",
+                        "Phân phối độc quyền",
+                        "Phân phối có chọn lọc"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "67",
+                "question": "Công ty bạn thông qua những người khác phân phối sản phẩm hoặc dịch vụ của bạn trực tiếp cho khách hàng (là cửa hàng bán lẻ mà bạn không sở hữu) được gọi là:",
+                "options": [
+                        "Phân phối trực tiếp",
+                        "Phân phối gián tiếp",
+                        "Phân phối rộng rãi",
+                        "Phân phối có chọn lọc"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "68",
+                "question": "Chuyên gia khuyến khích bạn sử dụng kênh truyền thông nào để truyền thông thông điệp đến với khách hàng hiệu quả?",
+                "options": [
+                        "Google Alerts",
+                        "Mạng xã hội (social media)",
+                        "Google Analytics",
+                        "Banner quảng cáo"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "69",
+                "question": "Phương tiện truyền thông sau đây là phương tiện truyền thông online, NGOẠI TRỪ:",
+                "options": [
+                        "Mạng xã hội (social media)",
+                        "Truyền hình trực tuyến",
+                        "Website",
+                        "Triển lãm thương mại"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "70",
+                "question": "Rủi ro trong kinh doanh đến từ yếu tố kinh tế vĩ mô, NGOẠI TRỪ",
+                "options": [
+                        "Sự thay đổi thể chế chính trị",
+                        "Thảm hoạ thiên tai, dịch bệnh",
+                        "Sự suy thoái nền kinh tế",
+                        "Thảm họa hỏa hoạn tại trụ sở doanh nghiệp"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "71",
+                "question": "Vì sao trong bản kế hoạch kinh doanh cần nên đánh giá các rủi ro trọng yếu?",
+                "options": [
+                        "Bản kế hoạch kinh doanh quy định bắt buộc có nội dung này",
+                        "Tuỳ theo quan điểm lập kế hoạch kinh doanh của mỗi người",
+                        "Giúp người đọc bản kế hoạch kinh doanh tin tưởng hơn vào tiềm năng thành công của công ty",
+                        "Do nhà quản trị chỉ đạo"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "72",
+                "question": "_________ là tài liệu phản ánh tổng quát tình hình và kết quả kinh doanh trong một kỳ hoạt động của doanh nghiệp; báo cáo này liệt kê rõ doanh thu, chi phí, lãi/lỗ.",
+                "options": [
+                        "Báo cáo lưu chuyển tiền tệ",
+                        "Báo cáo kết quả kinh doanh",
+                        "Báo cáo kết quả bán hàng",
+                        "Bảng cân đối kế toán"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "73",
+                "question": "__________là một báo cáo tài chính doanh nghiệp tổng hợp, phản ánh tổng quát được toàn bộ tài sản hiện có cũng như nguồn vốn để hình thành các tài sản của doanh nghiệp tại một thời điểm nhất định.",
+                "options": [
+                        "Báo cáo lưu chuyển tiền tệ",
+                        "Báo cáo tài chính",
+                        "Báo cáo kết quả bán hàng",
+                        "Bảng cân đối kế toán"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "74",
+                "question": "_________là một bản báo cáo tài chính doanh nghiệp tổng hợp lại tình hình thu, chi tiền tệ của doanh nghiệp tại một thời điểm nhất định",
+                "options": [
+                        "Báo cáo lưu chuyển tiền tệ",
+                        "Báo cáo tài chính",
+                        "Báo cáo kết quả bán hàng",
+                        "Bảng cân đối kế toán"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "74a",
+                "question": "…………..cung cấp thông tin về tình hình tài chính, tình hình kinh doanh và các luồng tiền của một doanh nghiệp, đáp ứng yêu cầu quản lý của chủ doanh nghiệp, cơ quan Nhà nước.",
+                "options": [
+                        "Bảng cân đối kế toán (Balance sheet)",
+                        "Báo cáo kết quả kinh doanh (Income Statement)",
+                        "Báo cáo lưu chuyển tiền tệ (Cash flow statement)",
+                        "Báo cáo tài chính (Financial statements)"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "75",
+                "question": "Bộ báo cáo tài chính bao gồm các bản báo cáo nào sau đây?",
+                "options": [
+                        "Báo cáo kết quả kinh doanh (Income Statement)",
+                        "Bảng cân đối kế toán (Balance sheet)",
+                        "Báo cáo lưu chuyển tiền tệ (Cash flow statement)",
+                        "CảA,B,C"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "76",
+                "question": "_________ là toàn bộ số tiền sẽ thu được do tiêu thụ sản phẩm/ hoặc cung cấp dịch vụ, hoạt động tài chính và các hoạt động khác của doanh nghiệp.",
+                "options": [
+                        "Lợi nhuận",
+                        "Chi phí",
+                        "Doanh thu",
+                        "Giá bán"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "77",
+                "question": "_________ là chỉ số thể hiện sự chênh lệch giữa doanh thu và các chi phí trong các hoạt động sản xuất kinh doanh.",
+                "options": [
+                        "Lợi nhuận",
+                        "Chi phí",
+                        "Doanh thu",
+                        "Giá bán"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "78",
+                "question": "__________ là toàn bộ các khoản mà doanh nghiệp cần phải chi trả để có thể đạt được mục tiêu kinh doanh cuối cùng",
+                "options": [
+                        "Doanh thu",
+                        "Chi phí",
+                        "Lợi nhuận",
+                        "Công nợ"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "79",
+                "question": "ROA (Return on total assets) là:",
+                "options": [
+                        "là chỉ tiêu đo lường khả năng sinh lời trên tổng tài sản",
+                        "là chỉ tiêu đo lường khả năng sinh lời trên vốn chủ sở hữu",
+                        "là chỉ tiêu đo lường khả năng sinh lời trên tổng doanh thu",
+                        "là chỉ tiêu đo lường khả năng sinh lời trên tổng chi phí"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "80",
+                "question": "Báo cáo kết quả hoạt động kinh doanh (Statement of income) doanh giúp nhà quản trị:",
+                "options": [
+                        "Theo dõi dòng tiền thu, dòng tiền chi",
+                        "Theo dõi doanh thu bán hàng",
+                        "Theo dõi doanh thu, chi phí, lợi nhuận",
+                        "Theo dõi các khoản nợ doanh nghiệp phải trả"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "81",
+                "question": "Bảng cân đối kế toán (Balance sheet) phản ánh:",
+                "options": [
+                        "tài sản doanh nghiệp bạn đang sở hữu và nguồn vốn (bao gồm nợ phải trả và vốn chủ sở hữu)",
+                        "doanh thu và lợi nhuận",
+                        "doanh thu và chi phí",
+                        "tổng tiền mặt hiện có tại thời điểm nhất định"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "82",
+                "question": "Báo cáo lưu chuyển tiền tệ (Cash flow statement) giúp nhà quản trị:",
+                "options": [
+                        "Theo dõi hiệu quả kinh doanh của doanh nghiệp",
+                        "Theo dõi dòng tiền thu, dòng tiền chi",
+                        "Theo dõi doanh thu, chi phí, lợi nhuận",
+                        "Theo dõi các khoản nợ doanh nghiệp phải trả"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "83",
+                "question": "Công ty A mua một máy cán giấy với giá 300 triệu (thời gian sử dụng trong vòng 10 năm). Giá trị hao mòn của máy này mỗi năm là 30 triệu. Vậy giá trị 30 triệu này được gọi là:",
+                "options": [
+                        "Doanh thu",
+                        "Lợi nhuận",
+                        "Khấu hao",
+                        "Tài sản"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "84",
+                "question": "Bản chất của khấu hao là:",
+                "options": [
+                        "khoản chi phí",
+                        "khoản tiền mặt",
+                        "loại tài sản",
+                        "vốn khởi sự"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "85",
+                "question": "Kết thúc kỳ kinh doanh năm tài chính 2023, công ty ABC đạt biên lợi nhuận gộp là 36%. Chỉ số này có ý nghĩa gì?",
+                "options": [
+                        "Cứ 100 đồng chi phí bỏ ra thì công ty ABC có 36 đồng lợi nhuận gộp",
+                        "Cứ 100 đồng vốn bỏ ra thì công ty ABC có 36 đồng lợi nhuận gộp",
+                        "Cứ 100 đồng doanh thu tạo ra thì công ty ABC có 36 đồng lợi nhuận gộp",
+                        "Tất cả A, B, C đều sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "86",
+                "question": "Công ty X có nguyên giá tài sản cố định là 3 tỷ đồng, thời gian sử dụng bình quân là 15 năm. Mức khấu hao hằng năm tài sản cố định trên là bao nhiêu?",
+                "options": [
+                        "16 triệu đồng",
+                        "200 triệu đồng",
+                        "300 triệu đồng",
+                        "450 triệu đồng"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "87",
+                "question": "Kết thúc kỳ kinh doanh năm tài chính 2023, công ty A đã báo cáo tổng doanh thu thuần đạt được là 354 tỷ đồng. Vậy với giá vốn hàng bán là 212 tỷ đồng thì biên lợi nhuận gộp của A trong năm 2021 bằng bao nhiêu?",
+                "options": [
+                        "25%",
+                        "40%",
+                        "62%",
+                        "66%"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "88",
+                "question": "Phần phụ lục trong bản kế hoạch kinh doanh bao gồm những tài liệu gì?",
+                "options": [
+                        "Sơ yếu lý lịch của đội ngũ quản lý",
+                        "Tài liệu giới thiệu sản phẩm",
+                        "Tất cả tài liệu liên quan nhằm muốn chi tiết hoá nội dung của kế hoạch kinh doanh",
+                        "Cả A,B,C đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "89",
+                "question": "Vai trò của phần phụ lục trong bản kế hoạch kinh doanh?",
+                "options": [
+                        "Người đọc bản kế hoạch có thể hiểu chi tiết các vấn đề mà nội dung bản kế hoạch chưa mô tả hết",
+                        "Tăng tính thuyết phục và khả năng chấp thuận bản kế hoạch kinh doanh",
+                        "Khả năng được đầu tư cao",
+                        "Tất cả đáp án trên đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "90",
+                "question": "Những yếu tố cấu thành KHÔNG thuộc mô hình kinh doanh Canvas là?",
+                "options": [
+                        "Giá trị cung cấp",
+                        "Sơ đồ tổ chức",
+                        "Các kênh phân phối",
+                        "Các hoạt động chính"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "91",
+                "question": "Trong mô hình kinh doanh Canvas (Business Model Canvas), những yếu tố cấu thành thuộc tổ chức nội bộ doanh nghiệp mà khách hàng không thể nhìn thấy bao gồm?",
+                "options": [
+                        "Các đối tác chính",
+                        "Các nguồn lực chính",
+                        "Các hoạt động chính",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "92",
+                "question": "Yếu tố nào sau đây trong mô hình kinh doanh Canvas (Business Model Canvas) thuộc khía cạnh tổ chức nội bộ doanh nghiệp mà khách hàng KHÔNG thể nhìn thấy?",
+                "options": [
+                        "Các mối quan hệ khách hàng",
+                        "Các kênh liên lạc",
+                        "Các nguồn lực chính",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "93",
+                "question": "Trong mô hình kinh doanh Canvas (Business Model Canvas - BMC), đối với doanh nghiệp hoạt động trên nền tảng đa diện (a multi-sided platform); khách hàng của doanh nghiệp là?",
+                "options": [
+                        "Khách hàng Doanh nghiệp (B2B)",
+                        "Khách hàng trả tiền (Premium User)",
+                        "Khách hàng không trả tiền (Free User)",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "94",
+                "question": "Đâu KHÔNG PHẢI là yếu tố THƯỜNG được sử dụng để phân khúc thị trường?",
+                "options": [
+                        "Nhu cầu",
+                        "Kinh nghiệm",
+                        "Nhân khẩu học",
+                        "Hành vi"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "95",
+                "question": "Khi khách hàng của bạn là những công ty có nhu cầu đặt quảng cáo, đây là loại hình khách hàng nào?",
+                "options": [
+                        "Khách hàng người tiêu dùng (B2C)",
+                        "Khách hàng Doanh nghiệp (B2B)",
+                        "Cả A và B",
+                        "Khách hàng không trả tiền"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "96",
+                "question": "Giá trị mà doanh nghiệp bạn cung cấp cho khách hàng trả lời các câu hỏi nào sau đây?",
+                "options": [
+                        "Lý do tại sao khách hàng của bạn trả tiền cho sản phẩm của bạn",
+                        "Sản phẩm của bạn mang lại cho họ điều gì",
+                        "Làm sao để đề xuất giá trị sản phẩm của doanh nghiệp bạn nổi bật hơn của đối thủ cạnh tranh",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "97",
+                "question": "Đâu KHÔNG được xem là giá trị mà doanh nghiệp bạn có thể cung cấp cho khách hàng?",
+                "options": [
+                        "Sự thuận tiện",
+                        "Thiết kế độc đáo",
+                        "Chi phí",
+                        "Cá tính thương hiệu"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "98",
+                "question": "Đâu KHÔNG được xem là giá trị mà doanh nghiệp bạn có thể cung cấp cho khách hàng?",
+                "options": [
+                        "Rủi ro",
+                        "Cắt giảm chi phí",
+                        "Xác định địa vị",
+                        "Giá cả linh hoạt"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "99",
+                "question": "Đâu KHÔNG được xem là giá trị mà doanh nghiệp bạn có thể cung cấp cho khách hàng?",
+                "options": [
+                        "Giảm rủi ro",
+                        "Chi phí cơ hội",
+                        "Thiết kế độc đáo",
+                        "Giá cả linh hoạt"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "100",
+                "question": "Yếu tố nào sau đây trong mô hình kinh doanh Canvas (Business Model Canvas) thuộc khía cạnh doanh nghiệp mà khách hàng có thể nhìn thấy?",
+                "options": [
+                        "Các hoạt động chính",
+                        "Các kênh phân phối",
+                        "Các đối tác chính",
+                        "Các nguồn lực chính"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "101",
+                "question": "Đâu KHÔNG PHẢI là chức năng của kênh phân phối?",
+                "options": [
+                        "Xây dựng nhận biết về dịch vụ hay sản phẩm",
+                        "Tạo điều kiện để khách hàng mua hàng",
+                        "Đảm bảo sự hài lòng của khách hàng sau khi mua hàng thông qua những hỗ trợ",
+                        "Tạo mối quan hệ với các đối tác"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "102",
+                "question": "Các chức năng KHÔNG PHẢI của kênh phân phối bao gồm?",
+                "options": [
+                        "Giúp khách hàng tiềm năng đánh giá về sản phẩm hay dịch vụ",
+                        "Tạo điều kiện để khách hàng mua hàng",
+                        "Bàn giao giá trị cho khách hàng",
+                        "Tạo ra dòng doanh thu cho doanh nghiệp"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "103",
+                "question": "Các kênh phân phối tiêu biểu gồm:",
+                "options": [
+                        "Đại lý truyền thống",
+                        "Đến tận nơi hoặc trong cửa hàng",
+                        "Phân phối qua Internet",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "104",
+                "question": "Đâu KHÔNG PHẢI là mục đích chủ yếu của các mối quan hệ khách hàng?",
+                "options": [
+                        "Thu hút khách hàng mới",
+                        "Giữ chân khách hàng hiện tại",
+                        "Mở rộng danh mục sản phẩm",
+                        "Tăng doanh thu từ khách hàng hiện tại"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "105",
+                "question": "Các nguồn lực chính của doanh nghiệp KHÔNG bao gồm",
+                "options": [
+                        "Nhân lực",
+                        "Vật lực",
+                        "Trí lực",
+                        "Tài lực"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "106",
+                "question": "Đâu KHÔNG PHẢI là loại hình doanh nghiệp có sự phụ thuộc đặc biệt vào nguồn nhân lực chất lượng cao?",
+                "options": [
+                        "Bệnh viện",
+                        "Doanh nghiệp sản xuất dược phẩm",
+                        "Siêu thị bán lẻ",
+                        "Trung tâm nghiên cứu"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "107",
+                "question": "Vật lực KHÔNG bao gồm?",
+                "options": [
+                        "Đất đai",
+                        "Máy móc",
+                        "Phương tiện di chuyển",
+                        "Lực lượng lao động"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "108",
+                "question": "Vật lực KHÔNG bao gồm?",
+                "options": [
+                        "Nhà xưởng",
+                        "Thương hiệu",
+                        "Dây truyền sản xuất",
+                        "Phương tiện di chuyển"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "109",
+                "question": "Trí lực bao gồm:",
+                "options": [
+                        "Thuơng hiệu",
+                        "Bằng sáng chế",
+                        "Bản quyền",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "110",
+                "question": "Trí lực KHÔNG bao gồm:",
+                "options": [
+                        "Mô hình do doanh nghiệp phát triển",
+                        "Phần mềm",
+                        "Giấy chứng nhận",
+                        "Bản quyền"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "111",
+                "question": "Tài lực bao gồm",
+                "options": [
+                        "Đất đai",
+                        "Hạn mức tín dụng",
+                        "Thương hiệu",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "112",
+                "question": "Trí lực bao gồm",
+                "options": [
+                        "Bằng sáng chế",
+                        "Tiền mặt",
+                        "Máy móc",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "113",
+                "question": "Vật lực bao gồm",
+                "options": [
+                        "Tiền mặt",
+                        "Nhà xưởng",
+                        "Phần mềm",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "114",
+                "question": "Doanh nghiệp nào sau đây có sự phụ thuộc đặc biệt vào nguồn nhân lực chất lượng cao?",
+                "options": [
+                        "Siêu thị bán lẻ",
+                        "Công xưởng sản xuất",
+                        "Bệnh viện",
+                        "Khách sạn"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "115",
+                "question": "Hoạt động bán hàng bao gồm:",
+                "options": [
+                        "Thực hiện các cuộc điện thoại chào hàng",
+                        "Nghiên cứu phát triển sản phẩm mới",
+                        "Điều tra thị trường",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "116",
+                "question": "Các hoạt động vận hành doanh nghiệp bao gồm?",
+                "options": [
+                        "Tuyển dụng",
+                        "Kế toán",
+                        "Công việc hành chính",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "117",
+                "question": "Các hoạt động vận hành doanh nghiệp gồm:",
+                "options": [
+                        "Quan hệ công chúng",
+                        "Công việc hành chính",
+                        "Quảng cáo",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "118",
+                "question": "Quản trị sản xuất là loại hoạt động vận hành doanh nghiệp nào?",
+                "options": [
+                        "Tuyển dụng",
+                        "Kiểm toán",
+                        "Sản xuất",
+                        "Kế toán"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "119",
+                "question": "Đâu KHÔNG phải là đối tác chính của doanh nghiệp?",
+                "options": [
+                        "Khách hàng",
+                        "Nhà cung cấp",
+                        "Nhà cung cấp các dịch vụ bổ sung",
+                        "Kênh trung gian"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "120",
+                "question": "Các đối tác chính bao gồm",
+                "options": [
+                        "Khách hàng",
+                        "Nhà cung cấp dịch vụ bổ sung",
+                        "Đối thủ cạnh tranh",
+                        "Nhân viên"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "121",
+                "question": "Vai trò của các đối tác chính?",
+                "options": [
+                        "Mạng lưới mang lại hiệu quả kinh doanh",
+                        "Tối ưu hoá chi phí",
+                        "Chia sẻ hạ tầng",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "122",
+                "question": "Vai trò của đối tác chính KHÔNG bao gồm?",
+                "options": [
+                        "Phát triển thị trường",
+                        "Gỉảm thiểu rủi ro",
+                        "Tối ưu hoá chi phí",
+                        "Chia sẻ hạ tầng"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "123",
+                "question": "Có mấy loại chi phí chính:",
+                "options": [
+                        "Chi phí cố định - chi phí biến đối",
+                        "Chi phí lưu động - Chi phí cố đinh",
+                        "Chi phí cứng - chi phí mềm",
+                        "Chi phí lưu động - chi phí biến đổi"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "124",
+                "question": "Chi phí cố định bao gồm",
+                "options": [
+                        "Tiền thuê nhà xưởng",
+                        "Tiền trả lãi",
+                        "Tiền bảo hiểm",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "125",
+                "question": "Chi phí cố định bao gồm",
+                "options": [
+                        "Tiền mua nguyên vật liệu",
+                        "Tiền lương nhân viên kinh doanh",
+                        "Tiền thuê nhà xưởng",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "126",
+                "question": "Chi phí cố định KHÔNG bao gồm",
+                "options": [
+                        "Tiền lương nhân viên kinh doanh",
+                        "Tiền thuê nhà xưởng",
+                        "Tiền trả lãi",
+                        "Tiền lương nhân viên hành chính"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "127",
+                "question": "Chọn từ phù hợp: Chi phí cố định là Chi phí [ _______ ] kể cả khi khối lượng sản xuất thay đổi, số lượng bán hàng thay đổi hoặc số lượng dịch vụ được cung cấp thay đổi.",
+                "options": [
+                        "Hoạt động",
+                        "Không thay đổi",
+                        "Biến thiên",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "128",
+                "question": "Chọn từ phù hợp: Chi phí biến đổi là Chi phí [ _______ ] theo số lượng sản phẩm sản xuất được, số lượng bán hàng hoặc số lượng dịch vụ bạn cung cấp",
+                "options": [
+                        "Biến động",
+                        "Linh hoạt",
+                        "Tương thích",
+                        "Không thay đổi"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "129",
+                "question": "Các hoạt động phát sinh chi phí gồm:",
+                "options": [
+                        "Tìm kiếm các nguồn lực chính",
+                        "Thực hiện các hoạt động chính",
+                        "Làm việc với các đối tác chính",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "130",
+                "question": "Yếu tố tạo ra sự khác biệt độc đáo của một doanh nghiệp là?",
+                "options": [
+                        "Hiệu suất tốt hơn",
+                        "Hệ thống ưu việt hơn",
+                        "Bên vững hơn",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "131",
+                "question": "Thành phần được xem là giá trị mà doanh nghiệp cung cấp là:",
+                "options": [
+                        "Chi phí cơ hội",
+                        "Quảng cáo",
+                        "Sự thuận tiện",
+                        "Cả 3 phương án trên"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "132",
+                "question": "Chìa khoá giúp các ngành công nghiệp cung cấp sản phẩm/ dịch vụ tăng hiệu suất hơn là?",
+                "options": [
+                        "Khoa học, công nghệ",
+                        "Con người",
+                        "Mối quan hệ chiến lược",
+                        "Tăng trưởng thị trường"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "133",
+                "question": "Mục đích cuối cùng của trải nghiệm khách hàng/ người dùng là",
+                "options": [
+                        "Thu hút càng nhiều khách hàng càng tốt",
+                        "Đạt được và vượt kỳ vọng của khách hàng/ người dùng trong quá trình trải nghiệm",
+                        "Tạo ra lợi thế cạnh tranh cho công ty",
+                        "Gia tăng doanh thu cho doanh nghiệp"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "134",
+                "question": "Đối với các doanh nghiệp dịch vụ, các hoạt động giúp cải thiện trải nghiệm khách hàng là?",
+                "options": [
+                        "Thiết kế các nền tảng công nghệ nhằm tăng cường sự tin tưởng của khách hàng và các bên tham gia.",
+                        "Tuyển đội ngũ nhân viên có ngoại hình xinh đẹp",
+                        "Đưa ra chế độ đãi ngộ cao với nhân viên kinh doanh",
+                        "Đầu tư trang thiết bị cơ sở vật chất đẹp mắt"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "135",
+                "question": "Với một công ty khởi nghiệp, xu hướng tiếp cận khách hàng nào sẽ có hiệu quả tốt nhất?",
+                "options": [
+                        "Tặng quà dùng thử",
+                        "Đảm bảo hoàn lại tiền",
+                        "Gọi điện trực tiếp cho khách hàng",
+                        "Quảng cáo trên các đài truyền hình uy tín"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "136",
+                "question": "Đâu KHÔNG PHẢI là lợi thế được tạo ra từ hệ thống kênh phân phối?",
+                "options": [
+                        "Tốc độ giao hàng",
+                        "Giao hàng theo yêu cầu ( on demand delivery)",
+                        "Chuyển đổi số sản phẩm",
+                        "Mở rộng mạng lưới các cửa hàng tiện lợi"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "137",
+                "question": "Kênh bán hàng số KHÔNG bao gồm",
+                "options": [
+                        "Gian hàng tại website",
+                        "Trang thương mại điện tử",
+                        "Ứng dụng Mobile",
+                        "Ti vi"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "138",
+                "question": "Quy trình phát tiển sản phẩm mới bao gồm",
+                "options": [
+                        "Tư duy thiết kế",
+                        "Phân tích dữ liệu",
+                        "Phương pháp tinh gọn",
+                        "Cả 3 phương án trên đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "139",
+                "question": "Phương pháp nào KHÔNG thúc đẩy quy trình sản xuất?",
+                "options": [
+                        "Tiêu chuẩn hoá",
+                        "Tự động hoá",
+                        "Điện thoại bán hàng trực tiếp",
+                        "Đội ngũ nhân viên chuyên nghiệp"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "140",
+                "question": "Lý do cơ bản tại sao mọi người mua hàng?",
+                "options": [
+                        "Sự hưng phấn",
+                        "Sự cần thiết",
+                        "Sự nóng vội",
+                        "Sự mong chờ"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "141",
+                "question": "Xem xét vấn đề từ nhiều góc nhìn khác nhau làm cho nhà khởi nghiệp",
+                "options": [
+                        "Có những lập luận có tính thực tiễn",
+                        "Đưa ra các giải pháp đầy sáng tạo",
+                        "Đối mặt với những mâu thuẫn",
+                        "Tạo những kết quả bất ngờ"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "142",
+                "question": "Các phát biểu sau đây thể hiện sự nhầm lẫn trong khái niệm khởi nghiệp, NGOẠI TRỪ",
+                "options": [
+                        "Doanh nghiệp khởi nghiệp chỉ tồn tại ở quy mô nhỏ",
+                        "Khởi nghiệp kinh doanh là một việc dễ dàng",
+                        "Khởi nghiệp thành công chỉ nhờ vào một ý tưởng lớn",
+                        "Doanh nghiệp khởi nghiệp sáng tạo và đổi mới và doanh nghiệp nhỏ có sự khác biệt với nhau"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "143",
+                "question": "Nhà khởi nghiệp luôn",
+                "options": [
+                        "Khởi nghiệp kinh doanh khi còn trẻ",
+                        "Rời bỏ trường học để dồn hết tâm trí cho hoạt động khởi nghiệp kinh doanh",
+                        "Sử dụng thẻ tín dụng để tài trợ cho dự án khởi nghiệp",
+                        "Hình thành ý tưởng và lên kế hoạch triển khai ý tưởng kinh doanh"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "144",
+                "question": "Phát biểu nào trong số các phát biểu sau ây là đúng",
+                "options": [
+                        "Nhà khởi nghiệp có khả năng hình thành và phát triển một tầm nhìn từ những điều chưa có trong hiện tại",
+                        "Sự thành công của nhà khởi nghiệp chủ yếu do may mắn",
+                        "Điều quan trọng nhất mà nhà khởi nghiệp phải làm chính là tìm kiếm nguồn tài trợ cho dự án khởi nghiệp",
+                        "Khởi nghiệp kinh doanh chỉ đơn thuần là tạo nên sự giàu có"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "145",
+                "question": "Sáng tạo chính là ____về điều mới và đổi mới chính là______ điều mới",
+                "options": [
+                        "Tư duy; thực hiện",
+                        "Thực hiện; tư duy",
+                        "Nhìn thấy; thực hiện",
+                        "Tư duy; ứng dụng"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "146",
+                "question": "Kết quả từ sáng tạo và đổi mới chính là",
+                "options": [
+                        "Làm cho một điều gì đó trở nên hoàn hảo hơn",
+                        "Kết hợp những yếu tố thành phần theo một cách mới để tạo ra sản phẩm mới",
+                        "Loại bỏ những gì thừa và không cần thiết để sản phẩm trở nên đơn giản và tốt hơn",
+                        "Tất cả những điều trên đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "147",
+                "question": "Bán cầu não trái hình thành",
+                "options": [
+                        "Tư duy phi tuyến tính",
+                        "Tư duy tuyến tính",
+                        "Tư duy phi đối xứng",
+                        "Tư duy trực giác"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "148",
+                "question": "Tất cả những phát biểu dưới đây thể hiện các rào cản đối với sáng tạo của nhà khởi nghiệp, NGOẠI TRỪ:",
+                "options": [
+                        "Tập trung vào tính logic",
+                        "Quá thực tế",
+                        "Tuân theo các quy định và quy trình một cách mù quáng",
+                        "Luôn tìm kiếm nhiều câu trả lời hơn thay vì một"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "149",
+                "question": "Tư duy tuyến tính của ________ tập trung phạm vi hẹp, mang tính hệ thống và logic",
+                "options": [
+                        "Trực giác",
+                        "Tư duy không theo quy ước",
+                        "Bán cầu não phải",
+                        "Bán cầu não trái"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "150",
+                "question": "Kỹ năng cần thiết của người kinh doanh:",
+                "options": [
+                        "Kỹ năng thương lượng, đàm phám",
+                        "Kỹ năng lãnh đạo",
+                        "Kỹ năng tư duy sáng tạo",
+                        "A, B, C đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "151",
+                "question": "Điều nào sau đây không thể hiện lợi ích tiềm năng của người được nhượng quyền",
+                "options": [
+                        "Các hỗ trợ đào tạo nhân viên và bán hàng",
+                        "Lợi ích từ các chương trình marketing trên toàn quốc",
+                        "Quyền mặc cả khi mua hàng tập trung",
+                        "Dòng sản phẩm bị hạn chế"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "152",
+                "question": "Tỷ lệ thành công của những người nhượng quyền kinh doanh sẽ cao khi hệ thống nhượng quyền kinh doanh",
+                "options": [
+                        "Đòi hỏi người được nhượng quyền phải có kinh nghiệm về lĩnh vực kinh doanh được nhượng quyền",
+                        "Đòi hỏi người được nhượng quyền phải quản trị ơn vị của mình một cách chủ động",
+                        "Xây dựng được một thương hiệu mạnh thông qua các chương trình huấn luyện kỹ năng và kiến thức cho người được nhượng quyền",
+                        "Thực hiện tất cả những điều nêu trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "153",
+                "question": "___________là quy trình theo đó một nhóm nhỏ những con người sẽ tương tác với nhau để tạo ra một lượng lớn các ý tưởng đầy hình tượng và độc đáo",
+                "options": [
+                        "Tư duy nhóm",
+                        "Lên bản đồ tư duy",
+                        "Động não",
+                        "Tạo ra sản phẩm mẫu"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "154",
+                "question": "Đáp ứng ___________là điều căn bản cho mọi doanh nghiệp khởi nghiệp",
+                "options": [
+                        "Nhu cầu",
+                        "Mong muốn",
+                        "Sự cần thiết",
+                        "Những điểm tổn thương của khách hàng"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "155",
+                "question": "Quy trình phát triển ý tưởng kinh doanh theo trình tự nào trong số các trình tự sau đây",
+                "options": [
+                        "Nhận dạng cơ hội – Phân tích thị trường – Xây dựng kế hoạch kinh doanh",
+                        "Phân tích thị trường – Nhận dạng cơ hội – Xây dựng kế hoạch kinh doanh",
+                        "Xây dựng kế hoạch kinh doanh – Nhận dạng cơ hội – Phân tích thị trường",
+                        "Xây dựng kế hoạch kinh doanh – Phân tích thị trường – Nhận dạng cơ hội"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "156",
+                "question": "Cách thức nào được xem là tốt nhất để nhà khởi nghiệp thiết lập mối quan hệ hiệu quả với cộng đồng khởi nghiệp tại địa phương:",
+                "options": [
+                        "Nắm bắt bản chất của những thông tin thị trường",
+                        "Kiên trì thuyết phục các doanh nghiệp địa phương đầu tư vào doanh nghiệp của mình",
+                        "Tham dự các hội chợ triển lãm và hội thảo",
+                        "Chia sẻ thông tin về nội dung các hoạt động kinh doanh của những doanh nghiệp khác trên truyền thông xã hội"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "157",
+                "question": "____________ bao hàm việc thể hiện các mô tả cơ bản về ý tưởng sản phẩm/dịch vụ trước những khách hàng tiềm năng để đánh giá mối quan tâm, khát vọng và ý định mua hàng của họ",
+                "options": [
+                        "Thử nghiệm ý tưởng kinh doanh",
+                        "Thử nghiệm khái niệm sản phẩm",
+                        "Thử nghiệm về sự ấn tượng",
+                        "Tuyên bố giá trị của doanh nghiệp khởi nghiệp"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "158",
+                "question": "_________ là một kỹ thuật đồ họa hướng đến việc khuyến khích cả hoạt động sử dụng tư duy và hình ảnh trực quan để thể hiện mối quan hệ giữa các ý tưởng và cải thiện khả năng nhìn nhận vấn đề theo nhiều khía cạnh",
+                "options": [
+                        "Bản đồ tư duy",
+                        "Sản xuất sản phẩm mẫu",
+                        "Động não",
+                        "Tư duy nhóm"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "159",
+                "question": "Lựa chọn ý tưởng kinh doanh dựa vào:",
+                "options": [
+                        "Năng khiếu của chủ doanh nghiệp",
+                        "Nhu cầu thị trường",
+                        "Khả năng tài chính của doanh nghiệp",
+                        "Tất cả đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "160",
+                "question": "Điều kiện tạo nên hiệu quả cho chuỗi phân phối chính là:",
+                "options": [
+                        "Các thành viên trong chuỗi không phải chia sẻ nhiệm vụ",
+                        "Phải có từ 4 thành viên trong chuỗi",
+                        "Các thành viên phải có những mục tiêu khác nhau",
+                        "Được quản lý một cách cách có hiệu quả"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "161",
+                "question": "Một cách thức có hiệu quả nhất để bắt đầu xây dựng kế hoạch marketing khởi nghiệp chính là",
+                "options": [
+                        "Lên danh sách các loại thông tin cần thiết cho kế hoạch marketing",
+                        "Tập hợp các thông tin thứ cấp",
+                        "Tập hợp các thông tin sơ cấp",
+                        "Tất cả những câu trả lời nêu trên đều sai"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "162",
+                "question": "Các phát biểu sau đây là sai, NGOẠI TRỪ",
+                "options": [
+                        "Dòng tiền mặt ròng chính là lợi nhuận sau thuế",
+                        "Lợi nhuận là chênh lệch giữa doanh số và chi phí",
+                        "Tiền mặt ròng chính là chênh lệch giữa lượng tiền mặt sẵn có và tiền mặt chi trả",
+                        "Dòng tiền mặt ròng chỉ xuất hiện khi không có những khoản chi thực tế mà có những khoản thu thực tế bằng tiền"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "163",
+                "question": "Điều nào trong số những điều sau đây mô tả một kênh phân phối",
+                "options": [
+                        "Nhà sản xuất – Khách hàng",
+                        "Nhà sản xuất – Nhà bán lẻ - Khách hàng",
+                        "Nhà sản xuất – Nhà bán buôn – Nhà bán lẻ - Khách hàng",
+                        "Tất cả các câu trả lời nêu trên đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "164",
+                "question": "Liệu nó có tạo nên cảm nhận gì hay không? Có hợp lý hay không? Có làm cho người tiêu dùng bị kích thích hay không? Có phù hợp với xu thế môi trường? Giải quyết được một nhu cầu chưa được đáp ứng hay không? Tất cả những câu hỏi này cần được đặt ra trong suốt quá trình phân tích về_____",
+                "options": [
+                        "Tài chính",
+                        "Thị trường mục tiêu",
+                        "Ý tưởng",
+                        "Sản phẩm/dịch vụ"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "165",
+                "question": "Phân tích sản phẩm/dịch vụ cần thực hiện các điều sau đây, NGOẠI TRỪ:",
+                "options": [
+                        "Nghiên cứu ý định mua hàng",
+                        "Xác định lượng tiền vốn cần thiết cho doanh nghiệp khởi nghiệp",
+                        "Nghiên cứu dữ liệu thứ cấp tại bàn",
+                        "Điều tra thu thập các thông tin về hành vi khách hàng"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "166",
+                "question": "Các yếu tố sau đây cần thể hiện trong một tuyên bố về khái niệm sản phẩm, NGOẠI TRỪ:",
+                "options": [
+                        "Mô tả về tính năng và thuộc tính của sản phẩm",
+                        "Mô tả cách thức bán hàng và phân phối",
+                        "Mô tả về công nghệ sử dụng để sản xuất sản phẩm",
+                        "Mô tả về lợi ích em lại cho người tiêu dùng khi sử dụng sản phẩm"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "167",
+                "question": "Hai yếu tố cơ bản trong phân tích thị trường mục tiêu là:",
+                "options": [
+                        "Tình trạng của ngành và tình trạng của thị trường mục tiêu",
+                        "Sự hấp dẫn của ngành và sự hấp dẫn của thị trường mục tiêu",
+                        "Quy mô đủ lớn của ngành và nhu cầu của thị trường mục tiêu",
+                        "Sự hấp dẫn của ngành và nhu cầu sản phẩm trong ngành"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "168",
+                "question": "Nhà đầu tư sẽ nhấn mạnh đến các yếu tố nào khi xem xét bản kế hoạch kinh doanh?",
+                "options": [
+                        "Ý tưởng kinh doanh có tốt và thị trường có đủ lớn hay không",
+                        "Kinh nghiệm và năng lực của đội quản trị",
+                        "Tính khả thi về tài chính",
+                        "Tất cả những vấn đề nêu trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "169",
+                "question": "Yếu tố quan trọng quyết định sự thành công của doanh nghiệp chính là việc thấu hiểu khách hàng mục tiêu của mình, điều này nhà khởi nghiệp phải biết:",
+                "options": [
+                        "Khách hàng của mình là ai",
+                        "Khách hàng muốn điều gì",
+                        "Hành vi của khách hàng như thế nào",
+                        "Tất cả những điều như trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "170",
+                "question": "Một bản kế hoạch có tầm chiến lược:",
+                "options": [
+                        "Rất nhạy cảm và là thông tin chỉ có cấp cao mới nắm được",
+                        "Làm cho doanh nghiệp của bạn trở nên khác biệt so với đối thủ cạnh tranh",
+                        "Đảm bảo cho doanh nghiệp giành được thị trường",
+                        "Tất cả những iều nêu trên điều đúng"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "171",
+                "question": "Các yếu tố thuộc về hoạt động vận hành sau đây sẽ làm tăng khả năng cạnh tranh của doanh nghiệp khởi nghiệp, NGOẠI TRỪ:",
+                "options": [
+                        "Môi trường làm việc",
+                        "Các chương trình marketing có hiệu quả",
+                        "Hiệu suất hoạt động",
+                        "Mối quan hệ mật thiết với các đối tác chiến lược"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "172",
+                "question": "Chúng ta cần phải cập nhật bản kế hoạch kinh doanh bởi vì",
+                "options": [
+                        "Các thay đổi trong nội bộ và môi trường có thể làm thay đổi định hướng của bản kế hoạch kinh doanh",
+                        "Các mục tiêu được thiết lập không hợp lý",
+                        "Các mục tiêu không có tính đo lường ược",
+                        "Các mục tiêu không cụ thể"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "173",
+                "question": "__________ có thể giúp hình thành những ý tưởng về sản phẩm mới cũng như hỗ trợ giới thiệu chúng trên thị trường",
+                "options": [
+                        "Các sản phẩm và dịch vụ hiện tại",
+                        "Chính phủ",
+                        "Các kênh phân phối",
+                        "Người tiêu dùng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "174",
+                "question": "Yếu tố nào sau đây không thuộc về tiêu thức nhân khẩu học được sử dụng để xác định phân khúc thị trường:",
+                "options": [
+                        "Độ tuổi và giới tính",
+                        "Trình độ văn hóa",
+                        "Mật độ dân cư",
+                        "Thu nhập"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "175",
+                "question": "Điều tra về ý định mua hàng được xem là một bộ phần cấu thành trong phân tích về________________",
+                "options": [
+                        "Thể chế",
+                        "Tài chính",
+                        "Thị trường mục tiêu",
+                        "Sản phẩm/ dịch vụ"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "176",
+                "question": "Đối với một số ngành, trong một số thời điểm hay giai đoạn trong năm doanh số bán hàng lớn hơn mức bình thường, hiện tượng này được gọi là",
+                "options": [
+                        "Tính chu kỳ",
+                        "Tính nhạy cảm",
+                        "Tính bất ổn",
+                        "Tính mùa vụ"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "177",
+                "question": "Kế hoạch nhân sự bao gồm nội dung nào:",
+                "options": [
+                        "Tuyển dụng",
+                        "Trả lương",
+                        "Đào tạo, bồi dưỡng",
+                        "Tất cả đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "178",
+                "question": "Các yếu tố sau đây xác định nhu cầu nguyên vật liệu trong kỳ kinh doanh, NGOẠI TRỪ:",
+                "options": [
+                        "Kế hoạch sản xuất và tiêu thụ sản phẩm của doanh nghiệp",
+                        "Thay đổi trụ sở doanh nghiệp",
+                        "Tình hình tài chính của doanh nghiệp",
+                        "Định mức tiêu dùng nguyên vật liệu"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "179",
+                "question": "Chị Trang định mở xưởng sản xuất Rèm cửa, Chị tính rằng: - Lương cho bản thân chị Trang là 5.000.000 đồng một tháng - Trong một tháng sản xuất đầy đủ ngày công chị có thể may được 30 bộ Rèm cửa. - Chi phí nguyên liệu cho một bộ Rèm cửa là 1.000.000 đồng -Các chi phí khác trong doanh nghiệp hết tổng cộng 1.210.000 đồng mỗi tháng Hãy tính chi phí toàn bộ để sản xuất một bộ rèm cửa?",
+                "options": [
+                        "1.200.000 đồng",
+                        "1.210.000 đồng",
+                        "1.207.000 đồng",
+                        "1.000.000 đồng"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "180",
+                "question": "- Lương cho bản thân chị Dung là 6.000.000 đồng một tháng - Trong một tháng sản xuất đầy đủ ngày công chị có thể làm được 500 chiếc bánh. - Chi phí nguyên liệu cho một chiếc bánh là 60.000 đồng -Các chi phí khác trong doanh nghiệp hết tổng cộng 3.000.000 đồng mỗi tháng Hãy tính chi phí toàn bộ để sản xuất một chiếc bánh ?",
+                "options": [
+                        "78.000 đồng",
+                        "60.000 đồng",
+                        "72.000 đồng",
+                        "Tất cả đều sai"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "181",
+                "question": "Các đơn vị theo đuổi mô hình kinh doanh nhấn mạnh đến mối quan hệ khách hàng sẽ tập trung vào nhóm các yếu tố nào trong mô hình kinh doanh",
+                "options": [
+                        "Phân khúc khách hàng, mối quan hệ khách hàng và nguồn lực chủ yếu",
+                        "Phân khúc khách hàng, mối quan hệ khách hàng và kênh phân phối",
+                        "Mối quan hệ khách hàng, cấu trúc chi phí và dòng doanh thu",
+                        "Các hoạt động chủ yếu, nguồn lực chủ yếu và đối tác chủ yếu"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "182",
+                "question": "Hai yếu tố cơ bản của khả thi về tổ chức chính là:",
+                "options": [
+                        "Sự hấp dẫn của thị trường mục tiêu và hệ số hoàn vốn đầu tư",
+                        "Năng lực của đội quản trị và sự đầy đủ về nguồn lực",
+                        "Yêu cầu về vốn và sự hấp dẫn của ngành",
+                        "Thử nghiệm khái niệm sản phẩm và hệ số hoàn vốn đầu tư"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "183",
+                "question": "Cần tích hợp các yếu tố nào trong số các yếu tố sau đây khi định vị chiến lược:",
+                "options": [
+                        "Điểm mạnh và điểm yếu của doanh nghiệp",
+                        "Xu hướng và tình hình phát triển của ngành",
+                        "Thay đổi của thị trường và các cơ hội",
+                        "Tất cả những điều nêu trên"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "184",
+                "question": "Nguyên tắc xây dựng cơ cấu tổ chức quản trị doanh nghiệp:",
+                "options": [
+                        "Có mục tiêu chiến lược thống nhất",
+                        "Có sự mềm dẻo về tổ chức",
+                        "Bảo đảm tăng hiệu quả trong sản xuất kinh doanh",
+                        "A, B, C đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "185",
+                "question": "Mô  hình  kinh  doanh  Canvas  (Business Model Canvas - BMC) được phát triển bởi Alexander Osterwalder  và  Yves  Pigneur.  Trong  đó,  bao  gồm những yếu tố tương ứng với những trụ cột khác nhau góp phần tạo nên tổ chức của một doanh nghiệp. Mô hình kinh doanh Canvas có bao nhiêu yếu tố:",
+                "options": [
+                        "7",
+                        "8",
+                        "9",
+                        "10"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "186",
+                "question": "Trong các yêu tố sau đây của mô hình kinh doanh Canvas (Business Model Canvas - BMC) , yếu tố nào cho chúng ta biết được đối tượng khách hàng là ai? Họ nghĩ gì, nhìn nhận gì, cảm nhận gì và làm gì?",
+                "options": [
+                        "Quan hệ khách hàng (Customer Relationships)",
+                        "Phân khúc khách hàng – Customer Segment (CS)",
+                        "Kênh phân phối và truyền thông (Channels)",
+                        "Đối tác chính – Key Partnerships (KP)"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "187",
+                "question": "Trong các yêu tố sau đây của mô hình kinh doanh Canvas (Business Model Canvas - BMC) , yếu tố nào xác định tại sao khách hàng mua và sử dụng sản phẩm/dịch vụ của bạn, giúp khách hàng giải quyết vấn đề gì? Những nhu cầu nào của khách hàng cần được thỏa mãn?",
+                "options": [
+                        "Giải pháp giá trị – Value Propositions (VP)",
+                        "Quan hệ khách hàng (Customer Relationships)",
+                        "Kênh phân phối và truyền thông (Channels)",
+                        "Hoạt động chính – Key Activities (KA)"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "188",
+                "question": "Trong các yêu tố sau đây của mô hình kinh doanh Canvas (Business Model Canvas - BMC) , yếu tố nào cho biết cách thức mà doanh nghiệp giữ chân khách hàng cũ hoặc cách thức để thu hút khách hàng mới?",
+                "options": [
+                        "Phân khúc khách hàng – Customer Segment (CS)",
+                        "Kênh phân phối và truyền thông (Channels)",
+                        "Quan hệ khách hàng (Customer Relationships)",
+                        "Hoạt động chính – Key Activities (KA)"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "189",
+                "question": "Trong các yêu tố sau đây của mô hình kinh doanh Canvas (Business Model Canvas - BMC) , yếu tố nào cho biết cách thức cần duy trì để giữ được công việc kinh doanh của mình, việc sử dụng nguồn lực chính để tạo ra các giá trị mục tiêu khác biệt và qua đó thu được lợi nhuận.",
+                "options": [
+                        "Kênh phân phối và truyền thông (Channels)",
+                        "Nguồn lực chính – Key Resources (KR)",
+                        "Hoạt động chính – Key Activities (KA)",
+                        "Giải pháp giá trị – Value Propositions (VP)"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "190",
+                "question": "Một doanh nghiệp khởi nghiệp sẽ đối mặt với các vấn đề pháp lý bao gồm:",
+                "options": [
+                        "Loại hình doanh nghiệp theo quy định của pháp luật",
+                        "Bảo hộ tài sản tri thức",
+                        "Cả A và B",
+                        "Lịch trình lắp đặt thiết bị"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "191",
+                "question": "Các nhà khởi nghiệp sẽ chọn hình thức liên doanh khi:",
+                "options": [
+                        "Xâm nhập nhanh các thị trường mới",
+                        "Khi muốn tiếp cận và sử dụng tri thức cũng như tài sản hữu hình và vô hình của ối tác",
+                        "Cả A và B đều đúng",
+                        "Cả A và B đều sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "192",
+                "question": "Công ty là doanh nghiệp do:",
+                "options": [
+                        "Hai hay nhiều bên hùn vốn",
+                        "Do một chủ sở hữu đầu tư",
+                        "Cả A và B",
+                        "Tất cả đều sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "193",
+                "question": "Loại doanh nghiệp nào tự chịu trách nhiệm bằng toàn bộ tài sản của mình về mọi hoạt động của doanh nghiệp:",
+                "options": [
+                        "Công ty TNHH",
+                        "Công ty cổ phần",
+                        "Doanh nghiệp tư nhân",
+                        "Tất cả đều đúng"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "194",
+                "question": "Loại hình nào sau đây đăng ký kinh doanh tại Phòng Đăng ký kinh doanh thuộc Sở Kế hoạch – đàu tư cấp tỉnh / thành phố trực thuộc Trung ương:",
+                "options": [
+                        "Hộ kinh doanh cá thể",
+                        "Công ty Cổ phần",
+                        "Công ty TNHH",
+                        "B, C đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "195",
+                "question": "Về mặt pháp lý, doanh nghiệp tư nhân là doanh nghiệp:",
+                "options": [
+                        "Được phép phát hành trái phiếu",
+                        "Không được phép phát hành trái phiếu",
+                        "Có khả năng kiểm soát doanh nghiệp tối đa",
+                        "Được phép phát hành cổ phiếu"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "196",
+                "question": "Loại doanh nghiệp nào được phát hành cổ phiếu:",
+                "options": [
+                        "Doanh nghiệp tư nhân",
+                        "Công ty TNHH",
+                        "Công ty Cổ phần",
+                        "Tất cả đều không có quyền"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "197",
+                "question": "Loại doanh nghiệp nào phải chịu trách nhiệm vô hạn:",
+                "options": [
+                        "Doanh nghiệp nhà nước",
+                        "Công ty cổ phần",
+                        "Doanh nghiệp tư nhân",
+                        "Tất cả đều đúng"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "198",
+                "question": "Về mặt pháp lý, công ty TNHH 2 thành viên là doanh nghiệp:",
+                "options": [
+                        "Phải có Hội đồng thành viên",
+                        "Phải có 2 thành viên trở lên",
+                        "A, B đều đúng",
+                        "A, B đều sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "199",
+                "question": "Loại doanh nghiệp nào có số thành viên không quá 50:",
+                "options": [
+                        "Doanh nghiệp tư nhân",
+                        "Công ty trách nhiệm hữu hạn",
+                        "Hợp tác xã",
+                        "Công ty Cổ phần"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "200",
+                "question": "Hồ sơ đăng ký kinh doanh hộ kinh doanh cá thể bao gồm:",
+                "options": [
+                        "Văn bản ủy quyền",
+                        "Bản sao chứng chỉ hành nghề (đối với ngành nghề theo quy định)",
+                        "Văn bản xác nhận vốn pháp ịnh (đối với ngành nghề theo quy định)",
+                        "Giấy đề nghị đăng ký kinh doanh theo mẫu"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "201",
+                "question": "Trong loại hình doanh nghiệp nào, chủ sở hữu không được trực tiếp rút 1 phần số vốn đã góp vào công ty:",
+                "options": [
+                        "Công ty TNHH 1 thành viên",
+                        "Hộ kinh doanh cá thể",
+                        "Doanh nghiệp tư nhân",
+                        "Tất cả đều đúng"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "202",
+                "question": "Người đại diện theo pháp luật của doanh nghiệp tư nhân:",
+                "options": [
+                        "Giám đốc",
+                        "Chủ doanh nghiệp tư nhân",
+                        "Chủ tịch hội đồng quản trị",
+                        "A, B, C đều đúng"
+                ],
+                "answer": 1,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "203",
+                "question": "Loại doanh nghiệp nào không được phát hành cổ phiếu:",
+                "options": [
+                        "Doanh nghiệp tư nhân",
+                        "Công ty TNHH",
+                        "Hợp tác xã",
+                        "Tất cả đều không có quyền"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "204",
+                "question": "Công ty trách nhiệm hữu hạn có vốn góp của:",
+                "options": [
+                        "Nhiều người",
+                        "Một chủ sở hữu",
+                        "Nhà nước",
+                        "Tất cả đều đúng"
+                ],
+                "answer": 3,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "205",
+                "question": "Hồ sơ ăng ký kinh doanh công ty cổ phần bao gồm:",
+                "options": [
+                        "Dự thảo điều lệ công ty",
+                        "Danh sách thành viên cổ đông sáng lập",
+                        "A, B đều đúng",
+                        "A, B đều sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "206",
+                "question": "Về mặt pháp lý, công ty TNHH 1 thành viên là doanh nghiệp:",
+                "options": [
+                        "Được phát hành trái phiếu",
+                        "Được phát hành cổ phiếu",
+                        "Là một doanh nghiệp do một tổ chức hay một cá nhân làm chủ sở hữu",
+                        "Không có tư cách pháp nhân"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "207",
+                "question": "Khi đăng ký kinh doanh loại hình “Hộ kinh doanh cá thể”, cơ quan nào sau đây cấp giấy chứng nhận đăng ký kinh doanh:",
+                "options": [
+                        "Phòng đăng ký kinh doanh cấp quận, huyện, thị xã hay thành phố trực thuộc tỉnh",
+                        "Phòng đăng kinh doanh thuộc Sở Kế hoạch - đầu tư cấp tỉnh, thành phố trực thuộc trung ương",
+                        "Phòng Tài chính - Kế hoạch thuộc Uỷ ban nhân dân cấp quận, huyện, thị xã, thành phố trực thuộc tỉnh",
+                        "A, B, C đều sai"
+                ],
+                "answer": 2,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        },
+        {
+                "id": "208",
+                "question": "Chọn nhận định SAI",
+                "options": [
+                        "Khách hàng không trả tiền là điều kiện tiên quyết để doanh nghiệp hoạt động",
+                        "Khách hàng là lý do tồn tại của doanh nghiệp",
+                        "Chỉ có khách hàng trả tiền mới là khách hàng của doanh nghiệp",
+                        "Mọi tổ chức đều phục vụ một hoặc nhiều hơn một nhóm khách hàng riêng biệt"
+                ],
+                "answer": 0,
+                "explanation": "Giải thích cho câu trả lời: Đáp án đã được kiểm chứng."
+        }
+];
+
     
 
     
@@ -2478,23 +4998,30 @@
       
       const label1 = document.getElementById('label-part-1');
       const label2 = document.getElementById('label-part-2');
+      const label3 = document.getElementById('label-part-3');
       const check1 = label1.querySelector('.part-check-icon');
       const check2 = label2.querySelector('.part-check-icon');
+      const check3 = label3.querySelector('.part-check-icon');
+      
+      label1.classList.remove('active');
+      label2.classList.remove('active');
+      label3.classList.remove('active');
+      check1.style.color = 'transparent';
+      check2.style.color = 'transparent';
+      check3.style.color = 'transparent';
       
       if (partNum === 1) {
         label1.classList.add('active');
-        label2.classList.remove('active');
         check1.style.color = 'var(--primary)';
-        check2.style.color = 'transparent';
-        
+        document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **50 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
+      } else if (partNum === 2) {
+        label2.classList.add('active');
+        check2.style.color = 'var(--primary)';
         document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **50 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
       } else {
-        label2.classList.add('active');
-        label1.classList.remove('active');
-        check2.style.color = 'var(--primary)';
-        check1.style.color = 'transparent';
-        
-        document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **50 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
+        label3.classList.add('active');
+        check3.style.color = 'var(--primary)';
+        document.getElementById('exam-mode-desc-text').innerHTML = "Thời gian giới hạn **120 phút**. Đáp án và giải thích chỉ xuất hiện sau khi bạn nộp bài.";
       }
     }
 
@@ -2505,7 +5032,14 @@
       currentMode = mode;
       
       // Get selected raw questions
-      let rawData = selectedPart === 1 ? quizDataPart1 : quizDataPart2;
+      let rawData;
+      if (selectedPart === 1) {
+        rawData = quizDataPart1;
+      } else if (selectedPart === 2) {
+        rawData = quizDataPart2;
+      } else {
+        rawData = quizDataPart3;
+      }
       
       // Deep clone to avoid modifying original arrays
       let clonedData = JSON.parse(JSON.stringify(rawData));
@@ -2549,9 +5083,9 @@
       if (mode === 'exam') {
         timerBox.style.display = 'flex';
         timerBox.classList.remove('warning');
-        timeRemaining = activeQuizData.length * 60; // 1 minute per question
+        timeRemaining = selectedPart === 3 ? 120 * 60 : activeQuizData.length * 60; // 120 mins for part 3, otherwise 1 min per question
         
-        const displayMins = activeQuizData.length.toString().padStart(2, '0');
+        const displayMins = (selectedPart === 3 ? 120 : activeQuizData.length).toString().padStart(2, '0');
         document.getElementById('timer-display').innerText = `${displayMins}:00`;
         document.getElementById('btn-submit').style.display = 'inline-flex';
         document.getElementById('btn-next').style.display = 'inline-flex';
@@ -2834,7 +5368,14 @@
       document.getElementById('results-screen').classList.add('active');
 
       // Populate statistics
-      let partTitle = selectedPart === 1 ? 'Chương 1 - 6' : 'Chương 7 - 8';
+      let partTitle;
+      if (selectedPart === 1) {
+        partTitle = 'Chương 1 - 6';
+      } else if (selectedPart === 2) {
+        partTitle = 'Chương 7 - 8';
+      } else {
+        partTitle = '200 câu hỏi từ stodocu';
+      }
       document.getElementById('results-mode-subtitle').innerText = `${currentMode === 'exam' ? 'Thi Thử' : 'Luyện Tập'} - ${partTitle}`;
       document.getElementById('result-score').innerText = finalScore.toFixed(1);
       document.getElementById('stat-total').innerText = `${answered}/${activeQuizData.length}`;
